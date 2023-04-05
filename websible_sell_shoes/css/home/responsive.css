@@ -1,0 +1,72 @@
+@media screen and (max-width: 830px) {
+
+    .link_products{
+        opacity: 1;
+        width: 80%;
+        font-size: 12px;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    .slide-arrow .fa-solid{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .group_product {
+        flex-wrap: wrap;
+    }
+
+    .product_item {
+        width: 50%;
+        margin: auto;
+    }
+
+    .categoty_shose {
+        flex-wrap: wrap;
+    }
+
+    .category_item:nth-child(2n+1){
+        border-left: 0;
+    }
+
+    .item{
+        width: 33.3%;
+    }
+
+    .sale{
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .group_footer, .footer_information {
+        flex-wrap: wrap;
+    }
+
+    .footer_item, .information_item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .item{
+        width: 50%;
+    }
+
+    .footer_item, .information_item {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+    .product_item {
+        width: 100%;
+    }
+
+    .category_item{
+        border-left: 0;
+    }
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/products/product_details.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/slick_slider/slick.css">
+    <link rel="stylesheet" href="../../css/slick_slider/slick-theme.css">
+    <link rel="stylesheet" href="../../css/reponsive_header.css">
+</head>
+
+<body>
+    <div class="wraper">
+        <header id="header">
+            <section class="section_header">
+                <div class="container">
+                    <div class="header_group row">
+                        <div class="header_singup">
+                            <span class="text_header"><a href="#none">đăng nhập</a></span>
+                            <span class="text_header">/</span>
+                            <span class="text_header"><a href="#none">đăng ký</a></span>
+                        </div>
+                        <div class="click_show_menu">
+                            <label for="menu" class="icon_navbar">
+                                <div class="icon_nav_item"></div>
+                                <div class="icon_nav_item"></div>
+                                <div class="icon_nav_item"></div>
+                            </label>
+                            <input type="checkbox" class="nav_checked" name="" id="menu">
+                            <label for="menu" class="nav_overlay"></label>
+                            <div class="show_menu">
+                                <ul class="show_menu_all">
+                                    <li class="show_menu_search">
+                                        <form class="search">
+                                            <input type="text" placeholder="Tìm kiếm...">
+                                            <button type="submit" class="btn search_btn">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </form>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="../index.html">trang chủ</a>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">giới thiệu</a>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">nữ</a>
+                                        <i class="fa-solid fa-angle-down ese"></i>
+                                        <ul class="nav_shoes">
+                                            <li class="shoes_item"><a href="#none">classic</a></li>
+                                            <li class="shoes_item"><a href="#none">sunbaked</a></li>
+                                            <li class="shoes_item"><a href="#none">chuck 07s</a></li>
+                                            <li class="shoes_item"><a href="#none">one star</a></li>
+                                            <li class="shoes_item"><a href="#none">PSY - kicks</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">nam</a>
+                                        <i class="fa-solid fa-angle-down ese"></i>
+                                        <ul class="nav_shoes">
+                                            <li class="shoes_item"><a href="#none">classic</a></li>
+                                            <li class="shoes_item"><a href="#none">sunbaked</a></li>
+                                            <li class="shoes_item"><a href="#none">chuck 07s</a></li>
+                                            <li class="shoes_item"><a href="#none">one star</a></li>
+                                            <li class="shoes_item"><a href="#none">PSY - kicks</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">trẻ em</a>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">phụ kiện khác</a>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">tin tức</a>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">liên hệ</a>
+                                    </li>
+                                    <li class="show_menu_item">
+                                        <a href="#none">đăng nhập</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header_logo">
+                            <a href="#none">
+                                <h2 class="logo_header">nghi sport</h2>
+                            </a>
+                        </div>
+                        <ul class="header_event row">
+                            <li class="header_icon_search">
+                                <i class="fa-solid fa-magnifying-glass icon_search"></i>
+                                <div class="header_search">
+                                    <form class="search">
+                                        <input type="text" placeholder="Tìm kiếm...">
+                                        <button type="submit" class="btn search_btn">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <span class="arrow search_arrow"></span>
+                            </li>
+                            <li class="header_divider"></li>
+                            <li class="header_cart">
+                                <div class="header_text_cart cart_left">
+                                    <span class="text_header"><a href="#none">giỏ hàng</a></span>
+                                    <span class="text_header">/</span>
+                                    <span class="text_header header_price">0 đ</span>
+                                </div>
+                                <label for="nav_cart" class="header_shopping_cart cart_left">
+                                    <span class="shopping_cart">0</span>
+                                    <span class="bags"></span>
+                                </label>
+                                <input type="checkbox" class="nav_cart_checked" name="" id="nav_cart">
+                                <label for="nav_cart" class="nav_overlay"></label>
+                                <div class="show_cart">
+                                    <div class="cart_ctn">
+                                        <label for="nav_cart" class="nav_cart_close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </label>
+                                        <h1 class="title title_cart">giỏ hàng</h1>
+                                        <div class="cart_crossbar_all">
+                                            <span class="crossbar_cart"></span>
+                                        </div>
+                                        <h2 class="nav_notification_text">Chưa có sản phẩm trong <i
+                                                class="fa-solid fa-cart-shopping"></i> !.</h2>
+                                    </div>
+                                </div>
+                                <div class="shopping_cart_notification">
+                                    <h2 class="notification_text_cart">Chưa có sản phẩm trong <i
+                                            class="fa-solid fa-cart-shopping"></i> !</h2>
+                                </div>
+                                <span class="arrow cart_arrow"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section_navbar">
+                <div class="container">
+                    <ul class="navbar_menu row">
+                        <li class="menu_item"><a class="active_menu" href="../../index.html">trang chủ</a><span
+                                class="hover_menu"></span></li>
+                        <li class="menu_item"><a href="#none">giới thiệu</a><span class="hover_menu"></span></li>
+                        <li class="menu_item"><a href="#none">nữ <i class="fa-solid fa-angle-down"></i></a>
+                            <span class="hover_menu"></span>
+                            <ul class="shoes">
+                                <li class="shoes_item"><a href="#none">classic</a></li>
+                                <li class="shoes_item"><a href="#none">sunbaked</a></li>
+                                <li class="shoes_item"><a href="#none">chuck 07s</a></li>
+                                <li class="shoes_item"><a href="#none">one star</a></li>
+                                <li class="shoes_item"><a href="#none">PSY - kicks</a></li>
+                            </ul>
+                            <span class="arrow shoes_arrow"></span>
+                        </li>
+                        <li class="menu_item"><a href="#none">nam <i class="fa-solid fa-angle-down"></i></a>
+                            <span class="hover_menu"></span>
+                            <ul class="shoes">
+                                <li class="shoes_item"><a href="#none">classic</a></li>
+                                <li class="shoes_item"><a href="#none">sunbaked</a></li>
+                                <li class="shoes_item"><a href="#none">chuck 07s</a></li>
+                                <li class="shoes_item"><a href="#none">one star</a></li>
+                                <li class="shoes_item"><a href="#none">PSY - kicks</a></li>
+                            </ul>
+                            <span class="arrow shoes_arrow"></span>
+                        </li>
+                        <li class="menu_item"><a href="#none">trẻ em</a><span class="hover_menu"></span></li>
+                        <li class="menu_item"><a href="#none">phụ kiện khác</a><span class="hover_menu"></span></li>
+                        <li class="menu_item"><a href="#none">tin tức</a><span class="hover_menu"></span></li>
+                        <li class="menu_item"><a href="#none">liên hệ</a><span class="hover_menu"></span></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <div class="content">
+            <div class="container">
+                <section class="section_details">
+                    <div class="row details_all">
+                        <div class="col_2 details">
+                            <div class="product_image">
+                                <div class="thumb_details_img">
+                                    <img src="../../img/sport_clothes/sport_clothes_1.png" alt="">
+                                </div>
+                                <div class="thumb_details_img">
+                                    <img src="../../img/sport_clothes/sport_clothes_2.jpg" alt="">
+                                </div>
+                                <div class="thumb_details_img">
+                                    <img src="../../img/sport_clothes/sport_clothes_3.jpg" alt="">
+                                </div>
+                                <div class="thumb_details_img">
+                                    <img src="../../img/sport_clothes/sport_clothes_4.jpg" alt="">
+                                </div>
+                                <div class="thumb_details_img">
+                                    <img src="../../img/sport_clothes/sport_clothes_5.jpg" alt="">
+                                </div>
+                                <div class="thumb_details_img">
+                                    <img src="../../img/sport_clothes/sport_clothes_6.jpg" alt="">
+                                </div>
+                            </div>
+                            <ul class="image_details_all">
+                                <li class="image_details_item">
+                                    <img src="../../img/sport_clothes/sport_clothes_1.png" alt="">
+                                </li>
+                                <li class="image_details_item">
+                                    <img src="../../img/sport_clothes/sport_clothes_2.jpg" alt="">
+                                </li>
+                                <li class="image_details_item">
+                                    <img src="../../img/sport_clothes/sport_clothes_3.jpg" alt="">
+                                </li>
+                                <li class="image_details_item">
+                                    <img src="../../img/sport_clothes/sport_clothes_4.jpg" alt="">
+                                </li>
+                                <li class="image_details_item">
+                                    <img src="../../img/sport_clothes/sport_clothes_5.jpg" alt="">
+                                </li>
+                                <li class="image_details_item">
+                                    <img src="../../img/sport_clothes/sport_clothes_6.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col_2 details">
+                            <div class="details_menu">
+                                <span class="category_details">trang chủ</span>
+                                <span class="category_details">/</span>
+                                <span class="category_details">phụ kiện khác</span>
+                            </div>
+                            <div class="text_details">
+                                <h2 class="title_details">converse “metal CONS” pull over hoodiec</h2>
+                                <span class="crossbar"></span>
+                            </div>
+                            <div class="price_details">
+                                <div class="price">1,400,000 đ</div>
+                            </div>
+                            <form action="POST">
+                                <div class="row quantity_details">
+                                    <div class="col_4 row total_all">
+                                        <input class="reduce" type="button" value="-">
+                                        <input class="total" type="number" value="1">
+                                        <input class="increase" type="button" value="+">
+                                    </div>
+                                    <div class="col_3 total_all">
+                                        <button class="btn_details add_details_cart">Thêm vào giỏ</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <ul class="row details_service">
+                                <li class="col_2 service">
+                                    <h3 class="details_txt_title">Tính phí ship tự động</h3>
+                                    <ul class="row service_all">
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/service_details/service_1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/service_details/service_2.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/service_details/service_3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/service_details/service_4.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/service_details/service_5.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/service_details/service_6.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="col_2 service">
+                                    <h3 class="details_txt_title">Thanh toán</h3>
+                                    <ul class="row service_all">
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/footer/footer_1.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/footer/footer_2.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/footer/footer_3.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/footer/footer_4.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/footer/footer_5.png" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col_3">
+                                            <a href="">
+                                                <div class="service_image">
+                                                    <img src="../../img/footer/footer_6.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="note_details">
+                                <h3 class="details_txt_title">"Hãy trở thành Affilicate của chúng tôi để tìm thêm thu
+                                    nhập thụ động, kiếm tiền online"</h3>
+                            </div>
+                            <div class="col_3 details_register">
+                                <button class="btn_details_register btn_details">Đăng ký Affilicate</button>
+                            </div>
+                            <div class="product_meta">
+                                <div class="id_product_details">Mã: 100178783297</div>
+                                <div class="cat_product_details">Danh mục: <a href="">Phụ kiện khác</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/slick.js"></script>
+    <script src="../../js/slick.min.js"></script>
+
+    <script>
+        $('.product_image').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.image_details_all'
+        });
+        $('.image_details_all').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.product_image',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+
+        $('.menu_item a').on('click', function () {
+            $('.menu_item a.active_menu').removeClass('active_menu');
+            $(this).addClass('active_menu');
+        });
+    </script>
+</body>
+
+</html>
