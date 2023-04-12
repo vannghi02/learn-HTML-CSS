@@ -18,6 +18,7 @@
 
 .text_header a {
     padding: 16px 5px;
+    box-sizing: border-box;
     color: #b6b5b5;
     font-weight: 800;
     font-size: 12px;
@@ -41,6 +42,7 @@
 
 .header_logo {
     padding: 10px 0;
+    box-sizing: border-box;
     margin-left: 65px;
     font-size: 0;
 }
@@ -58,6 +60,7 @@
 .header_icon_search {
     position: relative;
     padding: 15px;
+    box-sizing: border-box;
     color: #b6b5b5;
     font-size: 16px;
     cursor: pointer;
@@ -82,6 +85,7 @@
     top: 100%;
     left: -180%;
     padding: 15px;
+    box-sizing: border-box;
     border-radius: 5px;
     box-shadow: -5px 8px 10px;
     z-index: 1;
@@ -95,6 +99,7 @@
 .header_search input {
     width: 260px;
     padding: 4px 10px;
+    box-sizing: border-box;
     border: 1px solid #504e4e3a;
     font-size: 16px;
     outline: none;
@@ -104,6 +109,7 @@
     position: absolute;
     right: 0;
     padding: 6px;
+    box-sizing: border-box;
     border: 0;
     border-radius: 2px 2px 0 0;
     color: var(--text-color-white);
@@ -201,6 +207,7 @@
 .notification_text_cart {
     width: 220px;
     padding: 30px 20px;
+    box-sizing: border-box;
     color: #888;
     font-size: 12px;
 }
@@ -234,6 +241,7 @@
 .menu_item a {
     display: block;
     padding: 16px 0;
+    box-sizing: border-box;
     color: var(--text-color-black);
     font-size: 14px;
     font-weight: 700;
@@ -274,6 +282,7 @@
     height: auto;
     left: -100%;
     padding: 16px 0;
+    box-sizing: border-box;
     border-radius: 4px;
     box-shadow: 0 5px 10px #88888894;
     background-color: var(--text-color-white);
@@ -282,6 +291,7 @@
 
 .shoes_item a {
     padding: 14px 10px;
+    box-sizing: border-box;
     border-bottom: 1px solid #b6b5b53f;
     color: #888;
     font-size: 15px;
@@ -320,12 +330,14 @@
 /* [D] SECTION HEADER */
 .content{
     padding-top: 130px;
+    box-sizing: border-box;
 }
 
 .thumb_details_img{
     position: relative;
     overflow: hidden;
     padding-bottom: 14%;
+    box-sizing: border-box;
 }
 
 .thumb_details_img img{
@@ -342,6 +354,7 @@
 
 .image_details_item{
     padding: 0 15px;
+    box-sizing: border-box;zing: border-box;
     cursor: pointer;
 }
 
@@ -357,6 +370,7 @@
 
 .details{
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .category_details{
@@ -369,6 +383,7 @@
 .text_details{
     position: relative;
     padding-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .title_details{
@@ -400,10 +415,21 @@
     margin-top: 20px;
 }
 
+.total_all{
+    width: 20%;
+}
+
+.btn_total_all{
+    width: 80%;
+    margin-left: 20px;
+}
+
 .reduce, .increase{
     display: block;
     width: 30px;
-    height: 45px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
     border: 1px solid #9999993f;
     cursor: pointer;
     outline: none;
@@ -418,6 +444,7 @@
 .total{
     display: flex;
     width: 50px;
+    height: auto;
     text-align: center;
     border: 1px solid #9999993f;
     outline: none;
@@ -426,8 +453,8 @@
 }
 
 .btn_details{
-    width: 100%;
-    height: 100%;
+    padding: 14px 24px;
+    box-sizing: border-box;
     border: 0;
     color: var(--text-color-white);
     background-color: #d26e4b;
@@ -456,6 +483,7 @@
 
 .service{
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .service_all{
@@ -467,6 +495,7 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 50px;
+    box-sizing: border-box;
 }
 
 .service_image img{
@@ -482,11 +511,13 @@
 }
 
 .details_register{
+    width: 100%;
     margin-top: 20px;
 }
 
 .btn_details_register{
     padding: 10px;
+    box-sizing: border-box;
     background-color: #c30005;
     text-transform: unset;
 }
@@ -502,8 +533,164 @@
 
 .id_product_details, .cat_product_details, .cat_product_details a{
     padding: 10px 0;
+    box-sizing: border-box;
     color: #888;
     font-size: 14px;
     font-weight: 400;
     border-top: 1px solid #9999993f;
 }
+
+
+/* [D] SECTION FOOTER*/
+.footer{
+    background-color: #070707ec;
+}
+
+.section_footer{
+    padding: 60px 0 30px;
+    box-sizing: border-box;
+}
+
+.group_footer{
+    margin: 0 -16px;
+    border-bottom: 1px solid #fff;
+}
+
+.footer_item {
+    padding: 0 16px 30px;
+    box-sizing: border-box;
+}
+
+.footer_title{
+    position: relative;
+    color: var(--text-color-white);
+    font-size: 22px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+.footer_active{
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    bottom: 0;
+    background-color: #c30005;
+}
+
+.text_note i{
+    width: 8%;
+    color: var(--text-color-white);
+}
+
+.col_2 .link_footer{
+    display: block;
+    padding: 16px 0;
+    box-sizing: border-box;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer_icon{
+    margin-top: 16px;
+}
+
+.icon_item_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+
+.icon_item_footer:first-child{
+    margin-left: 0;
+}
+
+.footer_icon .facebook{
+    background-color: #3a589d;
+}
+
+.footer_icon .instagram{
+    background-color: #3b6994;
+}
+
+.footer_icon .twitter{
+    background-color: #2478ba;
+}
+
+.footer_icon .pinterest{
+    background-color: #cb2320;
+}
+
+.footer_icon .rss{
+    background-color: #fc7600;
+}
+
+.footer_information{
+    align-items: center;
+    margin: 30px -16px 0;
+}
+
+.information_item{
+    padding: 0 16px 30px;
+    box-sizing: border-box;
+}
+
+.information_item .footer_title{
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+.footer_search{
+    position: relative;
+}
+
+.footer_search input{
+    width: 100%;
+    height: 40px;
+    padding: 5px 110px 5px 10px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;zing: border-box;
+}
+
+.footer_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 5px 5px 0;
+    color: var(--text-color-white);
+    background-color: #cb2320;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer_btn:hover{
+    background-color: rgb(167, 4, 4);
+    transition: all .3s linear;
+}
+
+.bank_image{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50%;
+    box-sizing: border-box;
+}
+
+.bank_image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* [D] SECTION FOOTER*/

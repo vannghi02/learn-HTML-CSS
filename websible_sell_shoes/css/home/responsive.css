@@ -40,23 +40,11 @@
         height: 40px;
         font-size: 14px;
     }
-
-    .group_footer, .footer_information {
-        flex-wrap: wrap;
-    }
-
-    .footer_item, .information_item {
-        width: 50%;
-    }
 }
 
 @media screen and (max-width: 550px) {
     .item{
         width: 50%;
-    }
-
-    .footer_item, .information_item {
-        width: 100%;
     }
 }
 

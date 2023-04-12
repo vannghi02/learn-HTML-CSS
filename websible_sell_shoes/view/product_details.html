@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/products/product_details.css">
+    <link rel="stylesheet" href="../../css/products/product_details_rps.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/header/reponsive_header.css">
+    <link rel="stylesheet" href="../css/footer/footer.css">
+    <link rel="stylesheet" href="../css/footer/footer_responsive.css">
     <link rel="stylesheet" href="../../css/slick_slider/slick.css">
     <link rel="stylesheet" href="../../css/slick_slider/slick-theme.css">
-    <link rel="stylesheet" href="../../css/reponsive_header.css">
 </head>
 
 <body>
@@ -31,7 +35,7 @@
                                 <div class="icon_nav_item"></div>
                                 <div class="icon_nav_item"></div>
                             </label>
-                            <input type="checkbox" class="nav_checked" name="" id="menu">
+                            <input type="checkbox" class="nav_checked" id="menu">
                             <label for="menu" class="nav_overlay"></label>
                             <div class="show_menu">
                                 <ul class="show_menu_all">
@@ -44,7 +48,7 @@
                                         </form>
                                     </li>
                                     <li class="show_menu_item">
-                                        <a href="../index.html">trang chủ</a>
+                                        <a href="index.html">trang chủ</a>
                                     </li>
                                     <li class="show_menu_item">
                                         <a href="#none">giới thiệu</a>
@@ -146,7 +150,7 @@
             <section class="section_navbar">
                 <div class="container">
                     <ul class="navbar_menu row">
-                        <li class="menu_item"><a class="active_menu" href="../../index.html">trang chủ</a><span
+                        <li class="menu_item"><a class="active_menu" href="../view/index.html">trang chủ</a><span
                                 class="hover_menu"></span></li>
                         <li class="menu_item"><a href="#none">giới thiệu</a><span class="hover_menu"></span></li>
                         <li class="menu_item"><a href="#none">nữ <i class="fa-solid fa-angle-down"></i></a>
@@ -183,7 +187,7 @@
             <div class="container">
                 <section class="section_details">
                     <div class="row details_all">
-                        <div class="col_2 details">
+                        <div class="details col_2">
                             <div class="product_image">
                                 <div class="thumb_details_img">
                                     <img src="../../img/sport_clothes/sport_clothes_1.png" alt="">
@@ -240,12 +244,12 @@
                             </div>
                             <form action="POST">
                                 <div class="row quantity_details">
-                                    <div class="col_4 row total_all">
+                                    <div class="row total_all">
                                         <input class="reduce" type="button" value="-">
                                         <input class="total" type="number" value="1">
                                         <input class="increase" type="button" value="+">
                                     </div>
-                                    <div class="col_3 total_all">
+                                    <div class="btn_total_all">
                                         <button class="btn_details add_details_cart">Thêm vào giỏ</button>
                                     </div>
                                 </div>
@@ -350,7 +354,7 @@
                                 <h3 class="details_txt_title">"Hãy trở thành Affilicate của chúng tôi để tìm thêm thu
                                     nhập thụ động, kiếm tiền online"</h3>
                             </div>
-                            <div class="col_3 details_register">
+                            <div class="details_register">
                                 <button class="btn_details_register btn_details">Đăng ký Affilicate</button>
                             </div>
                             <div class="product_meta">
@@ -362,11 +366,114 @@
                 </section>
             </div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="section_footer">
+                    <ul class="group_footer row">
+                        <li class="footer_item col_4">
+                            <h2 class="footer_title">
+                                <span class="footer_active"></span> giới thiệu
+                            </h2>
+                            <p class="text_note">Chào mừng bạn đến với ngôi nhà Converse! Tại đây, mỗi một dòng chữ, mỗi
+                                chi tiết và hình ảnh đều là những bằng chứng mang dấu ấn lịch sử Converse 100 năm, và
+                                đang không ngừng phát triển lớn mạnh.</p>
+                        </li>
+                        <li class="footer_item col_4">
+                            <h2 class="footer_title">
+                                <span class="footer_active"></span> địa chỉ
+                            </h2>
+                            <p class="text_note"><i class="fa-solid fa-location-dot"></i> Hà Nội</p>
+                            <p class="text_note"><i class="fa-solid fa-phone"></i> 0328484700</p>
+                            <p class="text_note"><i class="fa-solid fa-envelope"></i> vannghivn02@gmail.com</p>
+                            <p class="text_note"><i class="fa-brands fa-skype"></i> demonhunterp</p>
+                        </li>
+                        <li class="footer_item col_4">
+                            <h2 class="footer_title">
+                                <span class="footer_active"></span> menu
+                            </h2>
+                            <ul class="row">
+                                <li class="col_2">
+                                    <a class="link_footer active" href="">Trang chủ</a>
+                                    <a class="link_footer" href="">Cửa hàng</a>
+                                    <a class="link_footer" href="">Liên hệ</a>
+                                </li>
+                                <li class="col_2">
+                                    <a class="link_footer" href="">Giới thiệu</a>
+                                    <a class="link_footer" href="">Tin thức</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer_item col_4">
+                            <h2 class="footer_title">
+                                <span class="footer_active"></span> mạng xã hội
+                            </h2>
+                            <div class="footer_icon row">
+                                <a class="icon_item_footer facebook" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="icon_item_footer instagram" href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a class="icon_item_footer twitter" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="icon_item_footer pinterest" href=""><i class="fa-brands fa-pinterest"></i></a>
+                                <a class="icon_item_footer rss" href=""><i class="fa-solid fa-rss"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="footer_information row">
+                        <li class="information_item col_4">
+                            <h2 class="footer_title">đăng ký nhận thông tin</h2>
+                        </li>
+                        <li class="information_item col_3">
+                            <form class="footer_search" action="">
+                                <input type="text" placeholder="Email ...">
+                                <button class="btn footer_btn">đăng ký</button>
+                            </form>
+                        </li>
+                        <li class="information_item col_3">
+                            <ul class="row">
+                                <li class="footer_image col_4">
+                                    <a href="">
+                                        <div class="bank_image">
+                                            <img src="../img/footer/footer_1.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer_image col_4">
+                                    <a href="">
+                                        <div class="bank_image">
+                                            <img src="../img/footer/footer_2.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer_image col_4">
+                                    <a href="">
+                                        <div class="bank_image">
+                                            <img src="../img/footer/footer_3.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer_image col_4">
+                                    <a href="">
+                                        <div class="bank_image">
+                                            <img src="../img/footer/footer_4.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer_image col_4">
+                                    <a href="">
+                                        <div class="bank_image">
+                                            <img src="../img/footer/footer_5.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="../../js/main.js"></script>
-    <script src="../../js/slick.js"></script>
+    <!-- <script src="../../js/slick.js"></script> -->
     <script src="../../js/slick.min.js"></script>
 
     <script>

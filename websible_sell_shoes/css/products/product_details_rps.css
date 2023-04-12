@@ -1,0 +1,20 @@
+@media screen and (max-width: 1050px) {
+    .quantity_details{
+        flex-direction: column;
+    }
+
+    .btn_total_all{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .details_all{
+        flex-direction: column;
+    }
+
+    .col_2.details{
+        width: 100%;
+    }
+}
