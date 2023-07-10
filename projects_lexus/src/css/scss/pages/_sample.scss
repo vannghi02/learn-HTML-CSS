@@ -1,0 +1,63 @@
+#content {
+    padding: 20px;
+}
+
+i {
+    display: inline-block;
+}
+
+.block-element {
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-bottom:100px;
+
+    strong {
+        display: block;
+        font-size: 20px;
+        line-height: 35px;
+        margin-bottom: 15px;
+    }
+}
+
+.sp-sample-01 {
+    @include sp-normal('fork')
+}
+
+.sp-sample-02 {
+    @include sp-retina('fork')
+}
+
+.svg-sprite-sample-01{
+  @include useSvg-icons('twitter', 30px)
+}
+
+.svg-sprite-sample-02{
+  @include useSvg-icons('window', 30px)
+}
+
+.svg-sprite-sample-03{
+  @include useSvg-icons('youtube', 30px)
+}
+
+.vw-sample-text {
+    background-color: lightcoral;
+    color: #fff;
+    @include vw-font-size-pc(50);
+    @include line-height-pc(1);
+    padding: 10px;
+}
+
+@include breakpoint(tablet) {
+    .vw-sample-text {
+        background-color: lightgreen;
+        @include vw-font-size-tb(50);
+    }
+}
+
+@include breakpoint(mobile) {
+    .vw-sample-text {
+        background-color: lightsalmon;
+        @include vw-font-size-mo(25);
+    }
+}

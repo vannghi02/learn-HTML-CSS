@@ -1,0 +1,330 @@
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 99;
+    &::before{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 1px;
+        opacity: .1;
+        background-color: $black;
+        content: '';
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        padding: 0 35px 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+.logo{
+    &__link{
+        display: block;
+        width: 141px;
+        height: 33px;
+        padding: 22px 30px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.nav{
+    display: flex;
+    padding-left: 80px;
+}
+
+.nav-lst{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    &:hover{
+        .nav-lst__btn{
+            opacity: .4;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    &__btn{
+        position: relative;
+        padding: 30px 15px;
+        font-family: 'NobleB';
+        font-size: 15px;
+        color: $black;
+        text-transform: uppercase;
+        transition: .3s;
+        opacity: 1;
+        &:hover{
+            &::before{
+                visibility: visible;
+            }
+        }
+        &.active{
+            opacity: 1;
+        }
+    }
+}
+
+.nav-lst__btn.is_active{
+    opacity: 1;
+}
+
+.depth{
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 20%;
+    height: calc(100vh - 77px);
+    background-color: #f0f0f0;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: .3s;
+    &.is_on{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+
+        & + .overlay{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.depth-menu{
+    display: none;
+    position: relative;
+    padding: 49px 0;
+    transition: .3s;
+    &::before{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 70%;
+        height: 1px;
+        background-color: #d8d8d8;
+        transform: translateX(-50%);
+        content: '';
+    }
+    &__item{
+        &:hover{
+            .depth-sub{
+                opacity: 1;
+                visibility: visible;
+            }
+            .depth-menu__link{
+                font-family: 'NobleB';
+                font-weight: 700;
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__link{
+        position: relative;
+        display: block;
+        padding: 15px 60px;
+        font-family: 'NobelBook-Regular';
+        font-size: 20px;
+        color: $black;
+        line-height: 1.2;
+        transition: .3s;
+        &::before{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 5px;
+            height: 10px;
+            opacity: 0;
+            transition: .3s;
+            background: url(../../../img/svg/ico_next.svg) no-repeat 50%/contain;
+            transform: translate3d(-40px,0,0) translateY(-50%);
+            content: '';
+        }
+    }
+}
+
+.depth-menu.is_on{
+    display: block;
+}
+
+.depth-sub{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    padding: 49px 0 49px 0;
+    background-color: #2c2c2c;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    &__item:hover .depth__inner{
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        animation: fadeScaleIn .6s cubic-bezier(0,.35,0,1);
+    }
+    &__link{
+        position: relative;
+        display: block;
+        font-family: 'NobelBook-Regular';
+        padding: 15px 30px 15px 25%;
+        font-size: 20px;
+        color: #ffffff83;
+        transition: .5s;
+        &:hover{
+            color: #fff;
+            &::before{
+                opacity: 1;
+            }
+        }
+        &::before{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 5px;
+            height: 10px;
+            opacity: 0;
+            transition: .3s;
+            background: url(../../../img/svg/ico_next2.svg) no-repeat 50%/contain;
+            transform: translate3d(-50px,0,0) translateY(-50%);
+            content: '';
+        }
+    }
+}
+
+@keyframes fadeScaleIn {
+    0% {transform: scale(1.05)}
+    100% {transform: scale(1);}
+}
+
+.utils-submenu{
+    margin-top: 15px;
+    &__link{
+        display: block;
+        padding: 10px 54px;
+        font-family: 'NobelBook-Regular';
+        font-size: 14px;
+        color: #717171;
+        transition: .3s;
+        &:hover{
+            font-family: 'NobleB';
+            font-weight: 900;
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 77px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#000,0.4);
+    backdrop-filter: blur(40px);
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.quick-menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    &__link{
+        padding: 10px 15px;
+        font-family: 'NobelBook-Regular';
+        font-size: 14px;
+        color: $black;
+        text-transform: uppercase;
+    }
+}
+
+.depth__inner{
+    position: absolute;
+    overflow: hidden;
+    width: 300%;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.depth-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: .5s;
+}
+
+.content-title{
+    padding: 80px 0 0 60px;
+    &__name, &__price{
+        display: block;
+        font-family: 'NobelBook-Regular';
+        font-size: 47px;
+        color: #fff;
+    }
+    &__price{
+        margin-top: 16px;
+        font-size: 25px;
+    }
+    .btn-box{
+        margin-top: 50px;
+        display: flex;
+        &__link{
+            margin-left: 10px;
+            display: block;
+            padding: 16px 60px;
+            border: 2px solid #fff;
+            font-size: 16px;
+            color: #fff;
+            transition: .3s;
+            &:first-child{
+                margin-left: 0;
+            }
+            &:hover{
+                background-color: #d8d8d8;
+                color: #000;
+            }
+        }
+    }
+}
+
+.content-lst{
+    display: flex;
+    justify-content: center;
+    margin-top: 450px;
+    font-family: 'NobelBook-Regular';
+    color: #fff;
+    &__item{
+        margin-left: 80px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    &__text{
+        display: block;
+        font-size: 20px;
+    }
+    &__number{
+        display: block;
+        font-size: 28px;
+    }
+}

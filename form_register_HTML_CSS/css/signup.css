@@ -1,0 +1,347 @@
+:root {
+    --text-color: #fff;
+    --style-color: #0ef;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+input,
+select,
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+em {
+    font-style: normal
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 16px;
+}
+
+.list {
+    display: flex;
+}
+
+.item {
+    width: 50%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: #000;
+    background-color: var(--style-color);
+    font-size: 18px;
+    font-weight: 700;
+    transition: .5s;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    box-shadow: 0 0px 10px #0ef;
+}
+
+/* Phần common */
+
+/* Phần code */
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/hinh-anh-xe-o-to_14.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #0000008f;
+    z-index: 5;
+}
+
+.group_information {
+    justify-content: space-between;
+}
+
+.information_contact {
+    margin-left: 16px;
+}
+
+.information_contact:first-child {
+    margin-left: 0;
+}
+
+.information_contact span,
+.information_contact a {
+    display: inline-block;
+    padding: 10px 0;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.register_login a {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px 0;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: .5s;
+}
+
+.register_login a:first-child {
+    margin-left: 0;
+}
+
+.register_login a::before {
+    position: absolute;
+    content: '|';
+    left: -15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.register_login a:first-child::before {
+    content: unset;
+}
+
+.register_login a:hover {
+    color: var(--style-color);
+}
+
+/* Thông tin liên hệ */
+
+/* logo và menu */
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 16px;
+}
+
+.navbar .logo {
+    color: var(--text-color);
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.menu_item {
+    margin-left: 30px;
+}
+
+.menu_item:first-child {
+    margin-left: 0;
+}
+
+.menu_item a {
+    display: inline-block;
+    padding: 10px 0;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.menu_item a:hover {
+    color: var(--style-color);
+}
+
+
+/* code Content */
+.content {
+    position: relative;
+    padding-top: 300px;
+    z-index: 1;
+}
+
+.list_content {
+    align-items: center;
+}
+
+.title_introduce,
+.title_introduce_job {
+    color: var(--text-color);
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.title_name {
+    margin-top: 16px;
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.title_introduce_job {
+    margin-top: 16px;
+    text-transform: unset;
+}
+
+.title_introduce_job span{
+    position: relative;
+    color: var(--style-color);
+    text-transform: capitalize;
+}
+
+.title_introduce_job span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-left: 3px solid var(--style-color);
+    animation: slidetext 3s steps(20) infinite;
+}
+
+@keyframes slidetext {
+    100%{
+        width: 0;
+        left: 100%;
+        margin: 0 -18px 0 18px;
+    }
+}
+
+.txt_description {
+    margin-top: 30px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.list_icon {
+    margin-top: 30px;
+}
+
+.icon a,
+.icon i {
+    display: inline-block;
+    font-size: 18px;
+    color: var(--style-color);
+    transition: 3s;
+}
+
+.icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    border: 2px solid var(--style-color);
+    border-radius: 100%;
+    transition: .5s;
+}
+
+.icon:first-child a {
+    margin-left: 0;
+}
+
+.icon a:hover {
+    background-color: var(--style-color);
+    box-shadow: 0 0 10px var(--style-color);
+}
+
+.icon a:hover i {
+    color: #000;
+}
+
+
+.avatar {
+    width: 600px;
+    margin: auto;
+    font-size: 0;
+    transition: .5s;
+    border: 4px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+    cursor: pointer;
+    animation: identifier 3s cubic-bezier(0.4, 0, 0.6, 1.01) 0s infinite;
+}
+
+.avatar img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.avatar:hover {
+    box-shadow: 0 0 20px var(--style-color);
+}
+
+@keyframes identifier {
+    50% {
+        transform: translate(2%, -2%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
