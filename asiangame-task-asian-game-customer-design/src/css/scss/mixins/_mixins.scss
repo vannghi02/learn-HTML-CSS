@@ -1,0 +1,441 @@
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+	background-image: -moz-linear-gradient(top, $startColor, $endColor);
+	background-image: -ms-linear-gradient(top, $startColor, $endColor);
+	background-image: -o-linear-gradient(top, $startColor, $endColor);
+	background-image: linear-gradient(top, $startColor, $endColor);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+@mixin background-size($width: 100%, $height: $width) {
+	@if type-of($width)=='number'and $height !=null {
+		@include css3-prefix('background-size', $width $height);
+	}
+
+	@else {
+		@include css3-prefix('background-size', $width);
+	}
+}
+
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+	background: $color;
+	background: rgba($color, $opacity);
+}
+
+@mixin border-radius($radius: 5px) {
+	@include css3-prefix('border-radius', $radius);
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, .4), $inset: "") {
+	@if ($inset !="") {
+		@include css3-prefix('box-shadow', $inset $x $y $blur $color);
+	}
+
+	@else {
+		@include css3-prefix('box-shadow', $x $y $blur $color);
+	}
+}
+
+@mixin box-sizing($type: border-box) {
+	@include css3-prefix('box-sizing', $type);
+}
+
+@mixin flex($value: 1) {
+	@include css3-prefix('box-flex', $value);
+}
+
+@mixin opacity($opacity: 0.5) {
+	$opacityMultiplied: ($opacity * 100);
+	filter: alpha(opacity=$opacityMultiplied);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+ $opacityMultiplied + ")";
+	@include css3-prefix('opacity', $opacity);
+}
+
+@mixin transform($params) {
+	@include css3-prefix('transform', $params);
+}
+
+@mixin transition($properties...) {
+	@if length($properties)>=1 {
+		@include css3-prefix('transition', $properties);
+	}
+
+	@else {
+		@include css3-prefix('transition', "all 0.2s ease-in-out 0s");
+	}
+}
+
+@mixin multi-ellipsis($line) {
+	display: block;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	@include css3-prefix('animation', $str);
+}
+
+@mixin absolute-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0
+}
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin vw-size-pc($property, $pc-pixel) {
+	#{$property}: $pc-pixel*1px;
+	#{$property}: $pc-pixel*100/1920*1vw;
+}
+
+@mixin vw-size-mo($property, $mo-pixel) {
+	#{$property}: $mo-pixel/360*720*1px;
+	#{$property}: $mo-pixel*100/360*1vw;
+}
+
+@mixin vw-font-size-pc($pc-pixel) {
+	font-size: $pc-pixel*1px;
+	font-size: $pc-pixel*100/1920*1vw;
+
+	@media (min-width: $screen-xlg) {
+		font-size: $pc-pixel*1px;
+	}
+}
+
+@mixin vw-font-size-tb($tb-pixel) {
+	font-size: $tb-pixel*1px;
+	font-size: $tb-pixel*100/1024*1vw;
+
+	@media (min-width: 1024px) {
+		font-size: $tb-pixel*1px;
+	}
+}
+
+@mixin vw-font-size-mo($mo-pixel) {
+	font-size: $mo-pixel/360*720*1px;
+
+  @media (max-width: 719px) {
+    font-size: $mo-pixel/360*720*1px;
+		font-size: $mo-pixel*100/360*1vw;
+	}
+
+	@media (max-width: $screen-xsm) {
+		font-size: $mo-pixel*1px;
+		font-size: $mo-pixel*100/360*1vw;
+	}
+}
+
+@mixin vw-size-txt-pc($pc-fz-pixel, $pc-lh-pixel) {
+  font-size: $pc-fz-pixel*1px;
+	font-size: $pc-fz-pixel*100/1920*1vw;
+  line-height: $pc-lh-pixel*1px;
+	line-height: $pc-lh-pixel*100/1920*1vw;
+
+	@media (min-width: $screen-xlg) {
+    font-size: $pc-fz-pixel*1px;
+		line-height: $pc-lh-pixel*1px;
+	}
+}
+
+@mixin vw-size-txt-tb($tb-fz-pixel, $tb-lh-pixel) {
+  font-size: $tb-fz-pixel*1px;
+	font-size: $tb-fz-pixel*100/1024*1vw;
+  line-height: $tb-lh-pixel*1px;
+	line-height: $tb-lh-pixel*100/1024*1vw;
+
+	@media (min-width: 1024px) {
+		font-size: $tb-fz-pixel*1px;
+		line-height: $tb-lh-pixel*1px;
+	}
+}
+
+@mixin vw-size-txt-mo($mo-fz-pixel, $mo-lh-pixel) {
+	font-size: $mo-fz-pixel/360*720*1px;
+  line-height: $mo-lh-pixel/360*720*1px;
+
+  @media (max-width: 719px) {
+    font-size: $mo-fz-pixel/360*720*1px;
+    font-size: $mo-fz-pixel*100/360*1vw;
+    line-height: $mo-lh-pixel/360*720*1px;
+    line-height: $mo-lh-pixel*100/360*1vw;
+	}
+
+	@media (max-width: $screen-xsm) {
+		font-size: $mo-fz-pixel*1px;
+		font-size: $mo-fz-pixel*100/360*1vw;
+    line-height: $mo-lh-pixel*1px;
+		line-height: $mo-lh-pixel*100/360*1vw;
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point==pc {
+		@media screen and(min-width: $screen-md) {
+			@content;
+		}
+	}
+
+	@else if $point==tb {
+		@media screen and(min-width: $screen-sm) and(max-width: ($screen-md - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==mo {
+		@media screen and(max-width: $screen-sm) {
+			@content;
+		}
+	}
+}
+
+@mixin respond-above($mq) {
+	@media (min-width: $mq) {
+		@content;
+	}
+}
+
+@mixin respond-between($mq-min, $mq-max) {
+	@media (min-width: $mq-min) and (max-width: $mq-max) {
+		@content;
+	}
+}
+
+@mixin respond-below($mq) {
+	@media (max-width: $mq) {
+		@content;
+	}
+}
+
+@mixin vw-convert-pc($property, $pc-pixel) {
+	@if type-of($pc-pixel)==number {
+		#{$property}: $pc-pixel*1px;
+		#{$property}: $pc-pixel*100/1920*1vw;
+
+		@media (min-width: $screen-xlg) {
+			#{$property}: $pc-pixel*1px;
+		}
+	}
+
+	@else if type-of($pc-pixel)==string {
+		#{$property}: auto;
+
+		@media (min-width: $screen-xlg) {
+			#{$property}: auto;
+		}
+	}
+
+	@else if type-of($pc-pixel)==list {
+		$px: ();
+		$vw: ();
+
+		@each $value in $pc-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+				$vw: append($vw, $value*100/1920*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		#{$property}: $px;
+		#{$property}: $vw;
+		$px: ();
+
+		@each $value in $pc-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+			}
+		}
+
+		@media (min-width:$screen-xlg) {
+			#{$property}: $px;
+		}
+	}
+}
+
+@mixin vw-convert-tb($property, $tb-pixel) {
+	@if type-of($tb-pixel)==number {
+		#{$property}: $tb-pixel*1px;
+		#{$property}: $tb-pixel*100/1024*1vw;
+
+		@media (min-width: 1024px) {
+			#{$property}: $tb-pixel*1px;
+		}
+	}
+
+	@else if type-of($tb-pixel)==string {
+		#{$property}: auto;
+
+		@media (min-width: 1024px) {
+			#{$property}: auto;
+		}
+	}
+
+	@else if type-of($tb-pixel)==list {
+		$px: ();
+		$vw: ();
+
+		@each $value in $tb-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+				$vw: append($vw, $value*100/1024*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		#{$property}: $px;
+		#{$property}: $vw;
+		$px: ();
+
+		@each $value in $tb-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+			}
+		}
+
+		@media (min-width: 1024px) {
+			#{$property}: $px;
+		}
+	}
+}
+
+@mixin vw-convert-mo($property, $mo-pixel) {
+	@if type-of($mo-pixel)==number {
+		#{$property}: $mo-pixel/360*720*1px;
+
+    @media (max-width: 719px) {
+			#{$property}: $mo-pixel/360*720*1px;
+		  #{$property}: $mo-pixel*100/360*1vw;
+		}
+
+		@media (max-width: $screen-xsm) {
+			#{$property}: $mo-pixel*1px;
+			#{$property}: $mo-pixel*100/360*1vw;
+		}
+	}
+
+	@else if type-of($mo-pixel)==string {
+		#{$property}: auto;
+
+    @media (max-width: 719px) {
+			#{$property}: auto;
+		}
+
+		@media (max-width: $screen-xsm) {
+			#{$property}: auto;
+		}
+	}
+
+	@else if type-of($mo-pixel)==list {
+		$px: ();
+		@each $value in $mo-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value/360*720*1px);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+			}
+		}
+
+		#{$property}:$px;
+
+		$px: ();
+		$vw: ();
+		@each $value in $mo-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value/360*720*1px);
+				$vw: append($vw, $value*100/360*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+    @media (max-width: 719px) {
+			#{$property}: $px;
+			#{$property}: $vw;
+		}
+
+		$px: ();
+		$vw: ();
+		@each $value in $mo-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+				$vw: append($vw, $value*100/360*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		@media (max-width: $screen-xsm) {
+			#{$property}: $px;
+			#{$property}: $vw;
+		}
+	}
+}

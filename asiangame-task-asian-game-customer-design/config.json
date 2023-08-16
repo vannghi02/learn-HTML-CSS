@@ -1,0 +1,47 @@
+{
+  "dir": {
+    "src": "src/",
+    "dist": "dist/"
+  },
+  "jsSetting": {
+    "src": "src/js/**/*.js",
+    "dist": "dist/js/",
+    "srcApps": "src/js/apps/*.js",
+    "minifyFileName": "asiangame.js"
+  },
+  "fontsSetting": {
+    "src": "src/font/**/*",
+    "dist": "dist/font/"
+  },
+  "videosSetting": {
+    "src": "src/video/**/*",
+    "dist": "dist/video/"
+  },
+  "imgSetting": {
+    "src": [
+      "src/img/**/*.{png,apng,jpg,jpeg,gif,ico}",
+      "!src/img/sprites/**/*"
+    ],
+    "watchSrc": "src/img/**/*",
+    "dist": "dist/img/",
+    "minOpts": {
+      "optimizationLevel": 5
+    }
+  },
+  "htmlSetting": {
+    "src": "src/**/*.html",
+    "dist": "dist/views",
+    "except": "src/views/include/*.html"
+  },
+  "cssSetting": {
+    "src": "src/css/scss/**/*.scss",
+    "dist": "dist/css/",
+    "libs": "src/css/libs/**/*",
+    "sprites": "src/css/sprites-data/*.*",
+    "sassOpts": {
+      "outputStyle": "compressed",
+      "errLogToConsole": false
+    }
+  },
+  "autoprefixer": ["> 1%", "last 2 versions", "iOS 10", "Android 2.3", "Firefox ESR", "IE 10"]
+}

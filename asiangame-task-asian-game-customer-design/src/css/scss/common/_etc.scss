@@ -1,0 +1,199 @@
+.etc_page ~ .riotbar-footer {
+	display: none;
+}
+
+.etc{
+	width: 100%;
+	height: calc(var(--vh, 1vh) * 100);
+	background: url(../img/bg_etc_pc.png)no-repeat top/cover;
+
+	@include breakpoint(mo){
+		background-image: url(../img/bg_etc_mo.png)
+	}
+
+	.inner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		@include vw-convert-pc(padding, 190 20 80);
+		box-sizing: border-box;
+		text-align: center;
+
+		@include breakpoint(mo){
+			@include vw-convert-mo(padding, 30 10 40);
+		}
+	}
+
+	&_tit{
+		@include vw-convert-pc(margin-top, 30);
+		font-family: $SDGyeokdong;
+		@include vw-size-txt-pc(40, 80);
+		letter-spacing: -.025em;
+
+		@include breakpoint(mo) {
+			@include vw-convert-mo(margin-top, 35);
+			@include vw-size-txt-mo(20, 40);
+		}
+	}
+
+	&_desc{
+		@include vw-size-txt-pc(24, 38);
+		letter-spacing: -.03em;
+
+		@include breakpoint(mo) {
+			@include vw-size-txt-mo(12, 19);
+		}
+	}
+
+	&_note{
+		@include vw-convert-pc(margin-top, 15);
+		@include vw-size-txt-pc(24, 34);
+		color: #ffbdbd;
+		letter-spacing: -.03em;
+
+		@include breakpoint(mo) {
+			@include vw-convert-mo(margin-top, 8);
+			@include vw-size-txt-mo(12, 17);
+		}
+	}
+
+	&_link{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include vw-convert-pc(margin-top, 36);
+		@include sp-normal('btn_482_red');
+
+		img{
+			@include vw-convert-pc(height, 32);
+
+			@include breakpoint(mo) {
+				@include vw-convert-mo(height, 16);
+			}
+		}
+
+		@include breakpoint(mo){
+			@include vw-convert-mo(margin-top, 17);
+			@include sp-normal-mo('btn_482_red');
+		}
+
+		&:hover{
+			@include sp-normal('btn_482_blue');
+
+			@include breakpoint(mo){
+				@include sp-normal-mo('btn_482_blue');
+			}
+		}
+	}
+
+	&_retry{
+		.ico{
+			@include sp-normal('ico_etc1');
+
+			@include breakpoint(mo){
+				@include sp-normal-mo('ico_etc1');
+			}
+		}
+
+	}
+
+	&_not_found{
+		.ico{
+			@include sp-normal('ico_etc2');
+
+			@include breakpoint(mo){
+				@include sp-normal-mo('ico_etc2');
+			}
+		}
+	}
+
+	&_maintenance{
+		.ico{
+			@include sp-normal('ico_etc3');
+
+			@include breakpoint(mo){
+				@include sp-normal-mo('ico_etc3');
+			}
+		}
+	}
+
+	&_light{
+		background-image: url(../img/bg_etc2_pc.png);
+
+		.etc_link{
+			@include vw-convert-pc(margin-top, 38);
+			@include sp-normal('btn_482_black');
+
+			@include breakpoint(mo){
+				@include vw-convert-mo(margin-top, 36);
+				@include sp-normal-mo('btn_482_black');
+			}
+
+			&:hover{
+				@include sp-normal('btn_482_blue');
+
+				@include breakpoint(mo){
+					@include sp-normal-mo('btn_482_blue');
+				}
+			}
+		}
+
+	}
+
+	&_end{
+		.inner{
+			@include vw-convert-pc(padding-top, 154);
+		}
+
+		.ico{
+			@include sp-normal('ico_etc4');
+
+			@include breakpoint(mo){
+				@include sp-normal-mo('ico_etc4');
+			}
+		}
+
+		.etc_note{
+			@include vw-convert-pc(margin-top, 4);
+
+			@include breakpoint(mo){
+				@include vw-convert-mo(margin-top, 2);
+			}
+		}
+	}
+
+	&_check_time{
+		.inner{
+			@include vw-convert-pc(padding-top, 145);
+
+			@include breakpoint(mo){
+				@include vw-convert-mo(padding-top, 26);
+			}
+		}
+
+		.ico{
+			@include sp-normal('ico_etc5');
+
+			@include breakpoint(mo){
+				@include sp-normal-mo('ico_etc5');
+			}
+		}
+
+		.etc_tit{
+			@include respond-above(769){
+				@include vw-convert-pc(margin-top, 36);
+			}
+		}
+
+		.etc_note{
+			@include vw-convert-pc(margin-top, 4);
+
+			@include breakpoint(mo){
+				@include vw-convert-mo(margin-top, 2);
+			}
+		}
+	}
+}

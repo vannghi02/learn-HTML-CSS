@@ -1,0 +1,602 @@
+$normal-vars: (
+	'bg_ico_condition': (
+		offset-x: 0,
+		offset-y: -343,
+		width: 277,
+		height: 188,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_lbl': (
+		offset-x: -1158,
+		offset-y: -280,
+		width: 102,
+		height: 44,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_lbl2': (
+		offset-x: -1158,
+		offset-y: -184,
+		width: 132,
+		height: 44,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_lbl3': (
+		offset-x: -1158,
+		offset-y: -582,
+		width: 102,
+		height: 27,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_lbl4': (
+		offset-x: -1158,
+		offset-y: -232,
+		width: 121,
+		height: 44,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_lbl_blur': (
+		offset-x: -1158,
+		offset-y: -328,
+		width: 102,
+		height: 44,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_lbl_blur2': (
+		offset-x: -1158,
+		offset-y: -613,
+		width: 102,
+		height: 27,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_line1': (
+		offset-x: -233,
+		offset-y: -864,
+		width: 409,
+		height: 44,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_line2': (
+		offset-x: -736,
+		offset-y: -1055,
+		width: 359,
+		height: 5,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_line3': (
+		offset-x: -988,
+		offset-y: -844,
+		width: 163,
+		height: 5,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_line4': (
+		offset-x: -736,
+		offset-y: -996,
+		width: 357,
+		height: 55,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_line5': (
+		offset-x: -242,
+		offset-y: -200,
+		width: 218,
+		height: 31,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_tit1': (
+		offset-x: 0,
+		offset-y: -535,
+		width: 691,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_tit2': (
+		offset-x: 0,
+		offset-y: -610,
+		width: 691,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_tit3': (
+		offset-x: -166,
+		offset-y: -996,
+		width: 281,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_tit4': (
+		offset-x: -546,
+		offset-y: -243,
+		width: 217,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_tit5': (
+		offset-x: -451,
+		offset-y: -996,
+		width: 281,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'bg_tit6': (
+		offset-x: 0,
+		offset-y: -1080,
+		width: 217,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_482_black': (
+		offset-x: -281,
+		offset-y: -343,
+		width: 482,
+		height: 92,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_482_blue': (
+		offset-x: -281,
+		offset-y: -439,
+		width: 482,
+		height: 92,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_482_red': (
+		offset-x: 0,
+		offset-y: -685,
+		width: 482,
+		height: 92,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_260': (
+		offset-x: -166,
+		offset-y: -914,
+		width: 260,
+		height: 78,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_260_disable': (
+		offset-x: -430,
+		offset-y: -914,
+		width: 260,
+		height: 78,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_260_hover': (
+		offset-x: -694,
+		offset-y: -914,
+		width: 260,
+		height: 78,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_285': (
+		offset-x: -486,
+		offset-y: -685,
+		width: 285,
+		height: 79,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_285_disable': (
+		offset-x: -233,
+		offset-y: -781,
+		width: 285,
+		height: 79,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_285_hover': (
+		offset-x: -522,
+		offset-y: -781,
+		width: 285,
+		height: 79,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_542': (
+		offset-x: -242,
+		offset-y: 0,
+		width: 542,
+		height: 96,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_542_disable': (
+		offset-x: -242,
+		offset-y: -100,
+		width: 542,
+		height: 96,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'btn_base_542_hover': (
+		offset-x: 0,
+		offset-y: -243,
+		width: 542,
+		height: 96,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_arrow2': (
+		offset-x: -1279,
+		offset-y: -514,
+		width: 14,
+		height: 22,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_arrow3': (
+		offset-x: -1283,
+		offset-y: -232,
+		width: 15,
+		height: 28,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_arrow4': (
+		offset-x: -1170,
+		offset-y: -746,
+		width: 25,
+		height: 48,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_arrow5': (
+		offset-x: -1219,
+		offset-y: -697,
+		width: 48,
+		height: 25,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_arrow_basic': (
+		offset-x: -1158,
+		offset-y: -376,
+		width: 66,
+		height: 66,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_arrow_disable': (
+		offset-x: -1228,
+		offset-y: -376,
+		width: 66,
+		height: 66,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_circle_black': (
+		offset-x: -1212,
+		offset-y: -644,
+		width: 46,
+		height: 46,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_circle_red_mo': (
+		offset-x: -1262,
+		offset-y: -644,
+		width: 39,
+		height: 39,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_circle_red_pc': (
+		offset-x: -1230,
+		offset-y: -91,
+		width: 71,
+		height: 71,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_close_pc': (
+		offset-x: -1199,
+		offset-y: -746,
+		width: 32,
+		height: 32,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_condition1': (
+		offset-x: -1158,
+		offset-y: -514,
+		width: 63,
+		height: 64,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_condition2': (
+		offset-x: -1158,
+		offset-y: -446,
+		width: 64,
+		height: 64,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_condition3': (
+		offset-x: -1226,
+		offset-y: -446,
+		width: 64,
+		height: 64,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_dropdown': (
+		offset-x: -1230,
+		offset-y: -166,
+		width: 26,
+		height: 14,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_etc1': (
+		offset-x: -988,
+		offset-y: 0,
+		width: 166,
+		height: 164,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_etc2': (
+		offset-x: -988,
+		offset-y: -168,
+		width: 166,
+		height: 164,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_etc3': (
+		offset-x: -988,
+		offset-y: -336,
+		width: 166,
+		height: 164,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_etc4': (
+		offset-x: -988,
+		offset-y: -504,
+		width: 166,
+		height: 164,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_etc5': (
+		offset-x: -988,
+		offset-y: -672,
+		width: 161,
+		height: 168,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_hand': (
+		offset-x: 0,
+		offset-y: -781,
+		width: 229,
+		height: 129,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_hand2': (
+		offset-x: -1158,
+		offset-y: 0,
+		width: 143,
+		height: 87,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_medal1': (
+		offset-x: -1158,
+		offset-y: -91,
+		width: 68,
+		height: 89,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_medal2': (
+		offset-x: -1264,
+		offset-y: -280,
+		width: 31,
+		height: 40,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_pop_tbl': (
+		offset-x: -166,
+		offset-y: -1071,
+		width: 543,
+		height: 2,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_product_txt': (
+		offset-x: -1158,
+		offset-y: -697,
+		width: 8,
+		height: 200,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_refresh': (
+		offset-x: -1264,
+		offset-y: -328,
+		width: 33,
+		height: 32,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_slash_mo': (
+		offset-x: -1170,
+		offset-y: -697,
+		width: 45,
+		height: 45,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_slash_pc': (
+		offset-x: -1158,
+		offset-y: -644,
+		width: 50,
+		height: 49,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_square1': (
+		offset-x: -1225,
+		offset-y: -514,
+		width: 50,
+		height: 50,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'ico_square2': (
+		offset-x: -1264,
+		offset-y: -582,
+		width: 24,
+		height: 24,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'stamp_acquired': (
+		offset-x: 0,
+		offset-y: 0,
+		width: 238,
+		height: 239,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'stamp_acquired_mo': (
+		offset-x: -788,
+		offset-y: 0,
+		width: 196,
+		height: 197,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'stamp_complete': (
+		offset-x: -788,
+		offset-y: -201,
+		width: 180,
+		height: 180,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'stamp_complete_mo': (
+		offset-x: 0,
+		offset-y: -914,
+		width: 162,
+		height: 162,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'stamp_fail': (
+		offset-x: -788,
+		offset-y: -385,
+		width: 180,
+		height: 180,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+	'stamp_success': (
+		offset-x: -788,
+		offset-y: -569,
+		width: 180,
+		height: 180,
+		total-width: 1301,
+		total-height: 1151,
+		imageSrc: '../img/normal.png'
+	),
+);
+
+$normal-origin: (
+  total-width: 1301,
+  total-height: 1151,
+  imageSrc: '../img/normal.png'
+);

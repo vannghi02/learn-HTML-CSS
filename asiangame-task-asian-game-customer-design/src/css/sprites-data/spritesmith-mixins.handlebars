@@ -1,0 +1,23 @@
+{
+	'functions': true
+}
+
+${{spritesheet_info.name}}-vars: (
+	{{#items}}
+	'{{name}}': (
+		offset-x: {{offset_x}},
+		offset-y: {{offset_y}},
+		width: {{width}},
+		height: {{height}},
+		total-width: {{total_width}},
+		total-height: {{total_height}},
+		imageSrc: '{{{escaped_image}}}'
+	),
+	{{/items}}
+);
+
+${{spritesheet_info.name}}-origin: (
+  total-width: {{spritesheet.width}},
+  total-height: {{spritesheet.height}},
+  imageSrc: '{{spritesheet.escaped_image}}'
+);

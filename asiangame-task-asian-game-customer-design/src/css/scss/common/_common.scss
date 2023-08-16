@@ -1,0 +1,125 @@
+body,input,select,textarea,button{font-family:$SDGyeokdong;font-weight:400;color:$white;}
+.blind,caption,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap;}
+
+.skip{height:0;}
+.skip a{display:block;position:absolute;top:-100px;left:0;width:100%;height:25px;text-align:center;}
+.skip a:focus,#skip a:active{position:absolute;top:0;z-index:100;padding:10px 0;background:#000;font-size:20px;font-weight:700;color:#fff;text-decoration:none;}
+
+.only_pc{
+	display: block;
+
+	@include breakpoint(mo) {
+		display: none;
+	}
+}
+
+.only_mo{
+	display: none;
+
+	@include breakpoint(mo) {
+		display: block;
+	}
+}
+
+img{
+	max-height: 100%;
+
+	&.only_pc{
+		display: inline-block;
+
+		@include breakpoint(mo) {
+			display: none;
+		}
+	}
+
+	&.only_mo{
+		display: none;
+
+		@include breakpoint(mo) {
+			display: inline-block;
+		}
+	}
+}
+
+.txt_highlight{
+	color: $red;
+}
+
+.logo{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.text_roll{
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	@include vw-convert-pc(width, 8040);
+	@include vw-convert-pc(height, 38);
+	animation: text_roll 40s infinite linear;
+	animation-play-state: running;
+	background-image: url(../img/img_text_roll1.png);
+	background-size: contain;
+
+	@include breakpoint(mo){
+		@include vw-convert-mo(width, 4020);
+		@include vw-convert-mo(height, 19);
+	}
+
+	&.only_mo{
+		display: flex;
+
+		@include respond-above(769px){
+			display: none;
+		}
+	}
+
+	&_red{
+		@include vw-convert-pc(width, 6184);
+		@include vw-convert-pc(height, 60);
+		background-image: url(../img/img_text_roll2.png);
+
+		@include breakpoint(mo){
+			@include vw-convert-pc(width, 3092);
+			@include vw-convert-mo(height, 30);
+		}
+	}
+}
+
+.animate{
+	@include transform(translateY(50px));
+	opacity: 0.0001;
+	transition: opacity .4s ease-out, transform .4s ease-out;
+	transition-delay: calc((var(--i) * .3s));
+
+	&.is_show{
+		@include transform(translateY(0));
+		opacity: 1;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		@include transform(translateY(0));
+	}
+	100% {
+		@include transform(translateY(10px));
+	}
+}
+
+@keyframes text_roll {
+	100%{
+		@include transform(translateX(-50%));
+  }
+}
+
+@keyframes rolling {
+  0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+  }
+  100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+  }
+}

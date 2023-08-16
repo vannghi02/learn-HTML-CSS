@@ -1,0 +1,156 @@
+@mixin sprite-image($image) {
+	$image-path: map-get($image, 'imageSrc');
+	background-image: url($image-path);
+}
+
+@mixin set-normal {
+  @include sprite-size($normal-origin);
+  @include sprite-image($normal-origin);
+}
+
+@mixin sprite-size($image) {
+  $totalWidth: map-get($normal-origin, 'total-width');
+  $totalHeight: map-get($normal-origin, 'total-height');
+  background-size: $totalWidth*1px $totalHeight*1px;
+  background-size: $totalWidth*100/1920*1vw $totalHeight*100/1920*1vw;
+
+  @media (min-width: $screen-xlg) {
+    background-size: $totalWidth*1px $totalHeight*1px;
+	}
+}
+
+@mixin sprite-position($image) {
+  $offsetX: map-get(map-get($normal-vars, $image), 'offset-x');
+  $offsetY: map-get(map-get($normal-vars, $image), 'offset-y');
+  background-position: $offsetX*1px $offsetY*1px;
+  background-position: $offsetX*100/1920*1vw $offsetY*100/1920*1vw;
+
+  @media (min-width: $screen-xlg) {
+    background-position: $offsetX*1px $offsetY*1px;
+	}
+}
+
+@mixin sp-normal($image, $size: true) {
+  @include set-normal;
+  @include sprite-position($image);
+	@if $size {
+    $width: map-get(map-get($normal-vars, $image), 'width');
+    $height: map-get(map-get($normal-vars, $image), 'height');
+    width: $width*1px;
+    width: $width*100/1920*1vw;
+    height:  $height*1px;
+    height:  $height*100/1920*1vw;
+
+    @media (min-width: $screen-xlg) {
+      width: $width*1px;
+      height:  $height*1px;
+    }
+	}
+}
+
+@mixin sprite-size-tb($image) {
+  $totalWidth: map-get($normal-origin, 'total-width');
+  $totalHeight: map-get($normal-origin, 'total-height');
+  background-size: $totalWidth*1px $totalHeight*1px;
+  background-size: $totalWidth*100/1024*1vw $totalHeight*100/1024*1vw;
+
+  @media (min-width: 1024px) {
+    background-size: $totalWidth*1px $totalHeight*1px;
+	}
+}
+
+@mixin sprite-position-tb($image) {
+  $offsetX: map-get(map-get($normal-vars, $image), 'offset-x');
+  $offsetY: map-get(map-get($normal-vars, $image), 'offset-y');
+  background-position: $offsetX*1px $offsetY*1px;
+  background-position: $offsetX*100/1024*1vw $offsetY*100/1024*1vw;
+
+  @media (min-width: 1024px) {
+    background-position: $offsetX*1px $offsetY*1px;
+	}
+}
+
+@mixin set-normal-tb {
+  @include sprite-size-tb($normal-origin);
+  @include sprite-image($normal-origin);
+}
+
+@mixin sp-normal-tb($image, $size: true) {
+  @include set-normal-tb;
+  @include sprite-position-tb($image);
+	@if $size {
+    $width: map-get(map-get($normal-vars, $image), 'width');
+    $height: map-get(map-get($normal-vars, $image), 'height');
+    width: $width*1px;
+    width: $width*100/1024*1vw;
+    height:  $height*1px;
+    height:  $height*100/1024*1vw;
+
+    @media (min-width: 1024px) {
+      width: $width*1px;
+      height:  $height*1px;
+    }
+	}
+}
+
+@mixin sprite-size-mo($image) {
+  $totalWidth: map-get($normal-origin, 'total-width');
+  $totalHeight: map-get($normal-origin, 'total-height');
+  background-size: $totalWidth*1px $totalHeight*1px;
+
+  @media (max-width: 719px) {
+    background-size: $totalWidth*1px $totalHeight*1px;
+    background-size: $totalWidth*100/720*1vw $totalHeight*100/720*1vw;
+  }
+
+  @media (max-width: $screen-xsm) {
+    background-size: $totalWidth/720*360*1px $totalHeight/720*360*1px;
+    background-size: $totalWidth*100/720*1vw $totalHeight*100/720*1vw;
+  }
+}
+
+@mixin sprite-position-mo($image) {
+  $offsetX: map-get(map-get($normal-vars, $image), 'offset-x');
+  $offsetY: map-get(map-get($normal-vars, $image), 'offset-y');
+  background-position: $offsetX*1px $offsetY*1px;
+
+  @media (max-width: 719px) {
+    background-position: $offsetX*1px $offsetY*1px;
+    background-position: $offsetX*100/720*1vw $offsetY*100/720*1vw;
+  }
+
+  @media (max-width: $screen-xsm) {
+    background-position: $offsetX/720*360*1px $offsetY/720*360*1px;
+    background-position: $offsetX*100/720*1vw $offsetY*100/720*1vw;
+  }
+}
+
+@mixin set-normal-mo {
+  @include sprite-size-mo($normal-origin);
+  @include sprite-image($normal-origin);
+}
+
+@mixin sp-normal-mo($image, $size: true) {
+  @include set-normal-mo;
+  @include sprite-position-mo($image);
+	@if $size {
+    $width: map-get(map-get($normal-vars, $image), 'width');
+    $height: map-get(map-get($normal-vars, $image), 'height');
+    width: $width*1px;
+    height:  $height*1px;
+
+    @media (max-width: 719px) {
+      width: $width*1px;
+      width: $width*100/720*1vw;
+      height:  $height*1px;
+      height:  $height*100/720*1vw;
+    }
+
+    @media (max-width: $screen-xsm) {
+      width: $width/720*360*1px;
+      width: $width*100/720*1vw;
+      height:  $height/720*360*1px;
+      height:  $height*100/720*1vw;
+    }
+	}
+}
