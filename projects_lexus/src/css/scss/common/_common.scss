@@ -1,0 +1,183 @@
+body,
+input,
+select,
+textarea,
+button {
+    font-family: 'NobleB'
+}
+
+.blind,
+caption span,
+legend {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    text-indent: -9999px
+}
+
+.skip {
+    height: 0
+}
+
+.skip a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 25px;
+    text-align: center
+}
+
+.skip a:focus,
+#skip a:active {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none
+}
+
+.title {
+    font-family: 'NobelR-Regular';
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: 0;
+    border-right: 1.5px solid #fff;
+    border-top: 1.5px solid #fff;
+    z-index: 10;
+    --swiper-navigation-size: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    right: 5%;
+    transform: rotate(45deg);
+}
+
+.swiper-button-prev {
+    left: 5%;
+    transform: rotate(-135deg);
+}
+
+.btn,
+.btn-models {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+
+    &--special{
+        margin-top: 38px;
+    }
+
+    &__item {
+        margin-left: 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 16px 60px;
+        font-family: 'SDGothicNeoR-Regular';
+        font-size: 16px;
+        font-weight: 400;
+        transition: .3s;
+
+        &--white {
+            border: 1px solid #fff;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+
+        &--black {
+            border: 1px solid #000;
+            color: #000;
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+
+        &.is-white {
+            border: 1px solid #fff;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+
+        &.is-black {
+            border: 1px solid #000;
+            color: #000;
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.btn-close {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 99;
+
+    &.is-on{
+        display: block;
+    }
+
+    &:hover &__item {
+        opacity: .5;
+    }
+
+    &__item {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 45px;
+        height: 1px;
+        background-color: #fff;
+        transition: .3s;
+
+        &:first-child {
+            transform: rotate(45deg);
+        }
+
+        &:last-child {
+            transform: rotate(-50deg);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@@include('./include/head.html',{"title": "Lexus"})
+
+<body data-pagestatus="new : 2019.10.10">
+	@@include('./include/skipnavigation.html')
+
+	<div class="wrap">
+		<!--[D] HEADER -->
+		@@include('./include/header.html',{"type": "01"})
+		<!--//[D] HEADER -->
+
+		<!-- [D] CONTENTS -->
+		<main id="content__models">
+			<div class="models-slider sliderBanner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="https://www.lexus.co.kr/source/car/LS_kv_pc_01_2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="https://www.lexus.co.kr/source/car/LS_kv_pc_02_4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="https://www.lexus.co.kr/source/car/LS_kv_pc_03_2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="https://www.lexus.co.kr/source/car/LS_kv_pc_04_3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="https://www.lexus.co.kr/source/car/LS_kv_pc_05_3.jpg" alt="">
+					</div>
+				</div>
+				<div class="slider-content">
+					<h2 class="slider-content__title">LS</h2>
+					<div class="slider-content__desc">
+						<div class="slider-content__txt">멀티 스테이지 하이브리드 <br> NEW LS 500h</div>
+					</div>
+				</div>
+				<div class="btn-slider">
+					<button type="button" class="btn-play is-play"></button>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</main>
+		<!-- // [D] CONTENTS -->
+
+		<!--[D] FOOTER -->
+		@@include('./include/footer.html',{"type": "01"})
+		<!--// [D] FOOTER -->
+	</div>
+
+	@@include('./include/script.html')
+</body>
+
+</html>
