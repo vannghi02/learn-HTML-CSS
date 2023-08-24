@@ -285,6 +285,7 @@
             }
         }
         .select-grade{
+            position: relative;
             width: 180px;
             border-right: 1px solid #d4d4d4;
             .parameter{
@@ -309,6 +310,46 @@
                     width: 14px;
                     height: 0.2px;
                     background-color: #000;
+                }
+            }
+            .info-menu{
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: -1px;
+                width: 182px;
+                transform: translateY(-93px);
+                opacity: 0;
+                &.is-open{
+                    display: block;
+                    transform: translateY(0);
+                    opacity: 1;
+                    transition: 1s;
+                }
+                &__item{
+                    border: 1px solid #d4d4d4;
+                    &:first-child{
+                        border-bottom: 0;
+                    }
+                }
+                &__link{
+                    display: block;
+                    padding: 30px 32px;
+                    text-align: right;
+                    background-color: $white;
+                    font-family: 'NobelBook-Regular';
+                    font-size: 18px;
+                    color: $black;
+                    transition: .3s;
+                    &:hover{
+                        background-color: $black;
+                        color: $white;
+                    }
+                    &.is-active{
+                        background-color: $black;
+                        color: $white;
+                    }
                 }
             }
         }

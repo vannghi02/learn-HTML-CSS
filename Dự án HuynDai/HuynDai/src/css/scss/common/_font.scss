@@ -1,0 +1,21 @@
+@mixin font-face($brand, $name) {
+  $filepath: 'https://ict-common.hyundai.net/fonts';
+  @font-face {
+    font-family: '#{$name}';
+    font-weight: normal;
+    font-style: normal;
+    src: url('#{$filepath}/#{$brand}/#{$name}.eot'); /* IE 6 ~ 8, IE 호환성 보기 */
+    src: url('#{$filepath}/#{$brand}/#{$name}.woff2') format('woff2'),
+      /* IE Edge, WOFF2 지원 브라우저 */ url('#{$filepath}/#{$brand}/#{$name}.woff') format('woff'),
+      /* IE 9+, 모던 브라우저 */ url('#{$filepath}/#{$brand}/#{$name}.ttf') format('truetype');
+  }
+}
+
+/* Hyundai font */
+@include font-face('hyundai', 'HyundaiSansHeadKRBold');
+@include font-face('hyundai', 'HyundaiSansHeadKRLight');
+@include font-face('hyundai', 'HyundaiSansHeadKRMedium');
+@include font-face('hyundai', 'HyundaiSansHeadKRRegular');
+@include font-face('hyundai', 'HyundaiSansTextKRBold');
+@include font-face('hyundai', 'HyundaiSansTextKRMedium');
+@include font-face('hyundai', 'HyundaiSansTextKRRegular');

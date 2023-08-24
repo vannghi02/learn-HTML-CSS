@@ -39,6 +39,7 @@
 
   $('.btn-select').click(function(){
     $(this).toggleClass('is-show');
+    $('.info-menu').toggleClass('is-open')
   });
 
   $(win).on('load resize', function () {
