@@ -1,0 +1,86 @@
+.wrap {
+    background-image: url(../../../img/bg_homePage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    padding-top: 150px;
+    height: 565px;
+
+    &_title {
+        font-family: 'InterRegular';
+        font-size: 48px;
+        color: #fff;
+
+        strong,
+        span {
+            color: #fba345;
+        }
+    }
+
+    &_desc {
+        font-family: 'InterRegular';
+        font-size: 16px;
+        line-height: 24px;
+        color: #D2BADE;
+    }
+}
+
+.search {
+    display: inline-block;
+    position: relative;
+    margin-top: 32px;
+
+    &_input {
+        width: 500px;
+        padding: 12px 50px 12px 20px;
+        border: 0;
+        border-radius: 20px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgba(88, 88, 88, 0.50);
+    }
+
+    &_btn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 30px;
+        height: 28px;
+        transform: translateY(-50%);
+        background-color: #F9841A;
+        border-radius: 100%;
+
+        .ico_search {
+            width: 14px;
+            height: 14px;
+            background-image: url(../../../img/svg/search-lg.svg);
+        }
+    }
+
+}
+
+.member {
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    display: inline-block;
+    padding: 27px 19px;
+    background-color: rgba(255, 255, 255, 0.60);
+    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    &_title {
+        color: #313131;
+        font-family: 'InterMedium';
+        font-size: 14px;
+        line-height: 120%;
+    }
+}

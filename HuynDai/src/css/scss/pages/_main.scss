@@ -41,6 +41,8 @@
     position: relative;
     display: block;
     padding: 18px 20px 17px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
     background-color: #f3f3f3;
     font-family: 'HyundaiSansHeadKRMedium';
     font-size: 16px;
@@ -53,7 +55,7 @@
       right: 20px;
       width: 6px;
       height: 12px;
-      background-image: url(../../../img/svg/next.svg);
+      background-image: url(../img/svg/next.svg);
       background-repeat: no-repeat;
       background-size: cover;
       content: '';
@@ -76,7 +78,7 @@
     right: 20px;
     width: 12px;
     height: 6px;
-    background-image: url(../../../img/svg/dropdowns.svg);
+    background-image: url(../img/svg/dropdowns.svg);
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateY(-50%);
@@ -207,7 +209,7 @@
     right: 20px;
     width: 15px;
     height: 15px;
-    background-image: url(../../../img/svg/error.svg);
+    background-image: url(../img/svg/error.svg);
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateY(-50%);
@@ -231,7 +233,7 @@
         top: 50%;
         width: 15px;
         height: 1px;
-        background-image: url(../../../img/svg/minus.svg);
+        background-image: url(../img/svg/minus.svg);
         transform: translateY(-50%);
       }
     }
@@ -251,7 +253,7 @@
       right: -2px;
       width: 15px;
       height: 15px;
-      background-image: url(../../../img/svg/plus.svg);
+      background-image: url(../img/svg/plus.svg);
       background-repeat: no-repeat;
       background-size: cover;
       content: '';

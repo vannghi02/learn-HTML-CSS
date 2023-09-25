@@ -1,0 +1,507 @@
+<div id="wrap">
+<div id="container">
+<div class="event_wrap" style="padding:0">
+<div class="e_cont" style="padding:0">
+<!--이벤트 영역-->
+<div class="payco_evt_wrap">
+<style scoped="scoped">
+html,body{width:100%;height:100%;margin:0;padding:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,th,td,input,select,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none}
+dl,ul,ol,menu,li{margin:0;padding:0;list-style:none}
+em{font-style:normal}
+.blind{overflow:hidden;position:absolute;padding:0!important;width:1px!important;height:1px!important;line-height:1px!important;clip: rect(1px,1px,1px,1px)}
+.payco_evt_bx{overflow:hidden;position:relative;background:#dbd5c5;font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Noto Sans",sans-serif}
+.payco_evt_bx .sec{position:relative;width:100%;max-width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}
+.payco_evt_bx .sec img{display: block;width:100%;max-width:100%;max-height: 100%;}
+.btn{display:inline-block;overflow:hidden;position:absolute;line-height:999px}
+.sec_noti{padding:45px 25px;background:#fff;font-size:0;text-align:left;-webkit-box-sizing:border-box;box-sizing:border-box}
+.sec_noti .tit{margin-bottom:20px;font-size:20px;color:#000;font-weight:700}
+.lst_noti li{position:relative;margin-top:9px;padding-left:10px;font-size:13px;font-weight:500;color:#424242;line-height:17px;list-style:none}
+.lst_noti li:before{position:absolute;top:7px;left:1px;width:2px;height:2px;background:#4b4a38;content:''}
+.lst_noti li:first-child{margin-top:0}
+.sec_share{font-family:pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","sans-serif"}
+.evt_duration{position:absolute;top:46.8%;width:100%;font-size:14px;text-align:center;color:#000}
+/* 카운트 다운 */
+.sec_count-down{padding:23px 0 20px;background-color:#111111;font-weight:400;font-family:Pretendard,-apple-system,sans-serif;}
+.sec_count-down .txt{color:#ffffff}
+.sec_count-down .txt.before,.sec_count-down .txt.after{opacity:0.6;vertical-align:middle;font-size:14px}
+.sec_count-down .txt.before{margin-right:9px}
+.sec_count-down .txt.after{margin-left:9px}
+.sec_count-down .em{display:block;text-align:center;font-size:17px;line-height:20px}
+.sec_count-down .count-down-area{margin-top:11px;text-align:center;font-size:0}
+.sec_count-down .count{display:inline-block;vertical-align:middle}
+.sec_count-down .count .txt{position:relative;display:inline-block;width:58px;border-radius:3px;border:1px solid rgba(255,255,255,0.13);font-size:29px;font-weight:700;line-height:35px;vertical-align:middle}
+.sec_count-down .count .divider{display:inline-block;width:12px;font-size:24px;color:#fff;vertical-align:middle;text-align:center;line-height:34px}
+/*template*/
+.sec_guide{padding:45px 25px;background-color:#fff}
+.sec_guide .tit_wrap{position:relative}
+.sec_guide .tit_wrap:after{display:block;position:absolute;top:50%;right:0;width:100%;height:1px;background-color:#333;content:''}
+.sec_guide .tit{display:inline-block;position:relative;z-index:1;padding-right:7px;background-color:#fff;font-size:20px;line-height:29px;font-weight:700;color:#333}
+.sec_guide .lst_guide{margin-top:23px;margin-left:5px}
+.sec_guide .lst_guide li{margin-top:13px;font-size:15px;line-height:20px;font-weight:700;color:#333}
+.sec_guide .btn{display:block;position:static;margin-top:15px;padding:21px 0;border-radius:10px;background-color:#fa2828;font-size:18px;font-weight:700;line-height:18px;color:#fff;text-align:center;box-sizing:border-box;letter-spacing:-0.5px;}
+.sec_guide .btn:first-of-type{margin-top:35px}
+.sec_guide .btn_type2{padding:19px 0;border:2px solid #fa2828;background-color:#fff;color:#fa2828}
+.sec_guide .btn_qrcode,.sec_guide .btn_barcode{padding:18px 0;background-color:#212632}
+.sec_guide .btn_qrcode:before,.sec_guide .btn_barcode:before{display:inline-block;overflow:hidden;background-repeat:no-repeat;background-size:100% auto;line-height:999px;vertical-align:middle;content:''}
+.sec_guide .btn_qrcode:before{width:18px;height:18px;margin-right:13px;margin-top:-5px;background-image:url(https://image.toast.com/aaaaac/paycoNoti/ico_qrcode.png)}
+.sec_guide .btn_barcode:before{width:20px;height:15px;margin-right:9px;margin-top:-6px;background-image:url(https://image.toast.com/aaaaac/paycoNoti/ico_barcode.png)}
+.sec_guide,.sec_noti{border-top:1px solid rgba(0,0,0,0.2)}/* 위에 오는 컨텐츠의 배경색이 흰색인 경우에만 기본 선색 적용, 다른 배경색 컨텐츠 다음으로 오게 될 경우 해당 영역 제거 */
+/* popup */
+.dimmed{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;width:100%;height:100%;background:rgba(0,0,0,0.8)}
+.ly_pop{position:fixed;top:50%;left:50%;z-index:100;width:285px;padding:0 10px 55px;background:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-align:center}
+.ly_popbx{display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-sizing:border-box;box-sizing:border-box;min-height:145px}
+.ly_popin{display:block}
+.ly_pop h2{padding:34px 0 6px;font-size:19px;color:#000;letter-spacing:-1px;line-height:25px}
+.ly_pop .ly_tit{display:inline}
+.ly_pop .tx_desc{padding:9px 13px 23px;-webkit-box-sizing:border-box;box-sizing:border-box;font-size:13px;line-height:21px;color:#333;height:100%}
+.ly_pop .tx_desc em{text-decoration:underline}
+.ly_pop .tx_in{display:block}
+.ly_pop .tx_card{font-size:13px}
+.ly_pop .btn_area{display:-webkit-box;display:flex;-webkit-box-sizing:border-box;box-sizing:border-box;position:absolute;top:auto;bottom:0;right:0;left:0;width:auto;height:55px;margin:0;padding:0 10px;background:none}
+.ly_pop .btn_area a{display:-webkit-box;display:flex;-webkit-box-flex:1;flex:1;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden;width:100%;height:45px;margin-left:4px;padding:1px 0 0;background:#1e1e1e;font-weight:700;font-size:15px;color:#fff;line-height:45px;text-align:center;text-decoration:none}
+.ly_pop .btn_area a:first-child{margin-left:0}
+.ly_pop .btn_area .btn_update{background:#fa2828}
+/* coupon templete */
+.sec_coupontpl{padding-bottom:13.3333vw;background:no-repeat 0 0;background-size:100% auto}
+.sec_coupontpl .cpn_link{position:relative;display:block;margin:0.5333vw 6.666666666666667% 0;text-decoration:none;color:#000;user-select:none;-webkit-user-select:none;border-radius:20px;background-color:#fff}
+.sec_coupontpl .cpn_link:first-child{margin-top:0}
+.sec_coupontpl .cpn_link:after{position:absolute;width:9.2308vw;height:9.2308vw;top:50%;right:5.2vw;transform:translateY(-50%);background:url(https://image.toast.com/aaaaac/paycoNoti/ico_tpl_coupon_dnld.png) 0 0;background-size:100% auto; content:"";z-index:1}
+.sec_coupontpl .coupon_area::before{overflow: hidden;position:absolute;top:0;bottom:0;width:100%;color:transparent;border-radius:20px;background:no-repeat 0 0;background-size:100% auto;z-index:1}
+.sec_coupontpl .coupon_area{position:relative;z-index:1;height:27.333333vw;}
+.sec_coupontpl .coupon_area::after{display:block;position:absolute;top:0;bottom:0;left:0;right:0;border-radius:20px;content:"";}
+.sec_coupontpl .coupon_area.cpn_case_first_b2,.coupon_area.cpn_case_b2,.coupon_area.cpn_case_re_a2,.coupon_area.cpn_case_re_b2,.coupon_area.cpn_case_e2,.coupon_area.cpn_case_f2,.coupon_area.cpn_case_first_a2,.coupon_area.cpn_case_j,.sec_coupontpl .coupon_area.cpn_case_a2{height:34.8vw}
+.sec_coupontpl .coupon_area.cpn_case_e1,.coupon_area.cpn_case_f1{height:31.333vw}
+.sec_coupontpl .coupon_area .cpn_thum{overflow:hidden;position:absolute;width:17.334vw;height:17.334vw;top:50%;left:5.846153%;transform:translateY(-50%)}
+.sec_coupontpl .coupon_area .cpn_desc_bx{margin:0 4.615384615% 0 31.076923%;height:100%;display:flex;flex-direction:column;justify-content:center}
+.sec_coupontpl .cpn_obj,.sec_coupontpl .cpn_name,.sec_coupontpl .cpn_payopt,.sec_coupontpl .cpn_price,.sec_coupontpl .cpn_code{display:block}
+.sec_coupontpl .cpn_obj{margin-top:.2667vw;white-space:nowrap;font-size:3.2vw;font-weight:500;color:#888}
+.sec_coupontpl .cpn_name{position:relative;padding:2vw 0;font-size:4.8vw;letter-spacing:-.0209em;font-weight:700;white-space:nowrap}
+.sec_coupontpl .cpn_name.payco_cpn{padding-bottom:0}
+.sec_coupontpl .cpn_name_add{padding-bottom:2vw;font-size:4.8vw;letter-spacing:-.0209em;font-weight:700;color:#fa2828}
+.sec_coupontpl .cpn_name .sale_rate{margin-right:1.0667vw}
+.sec_coupontpl .cpn_name .saleup_rate{color:#fa2828}
+.sec_coupontpl .cpn_name .saleup_rate.txt_black{color:#000}
+.sec_coupontpl .cpn_payopt{margin:-.3vw 0 .3vw;font-size:2.9333vw;color:#888;font-weight:500}
+.sec_coupontpl .cpn_payopt .cpn_payopt_name{display:block;color:#fa2828}
+.sec_coupontpl .cpn_payopt .cpn_payopt_desc{display:block;color:#888;margin-top: 0.5vw}
+.sec_coupontpl .cpn_price{font-size:3.7333vw}
+.sec_coupontpl .cpn_price del{margin-right:1.333vw;color:#888}
+.sec_coupontpl .cpn_code{font-size:3.734vw}
+.sec_coupontpl .cpn_code .code_txt{margin-left:1.2vw;color:#fa2828}
+.sec_coupontpl .cpn_case_i .cpn_name,.sec_coupontpl .cpn_case_j .cpn_name{padding:0}
+.sec_coupontpl .cpn_case_i .cpn_obj,.sec_coupontpl .cpn_case_j .cpn_obj{margin-bottom:2vw}
+.sec_coupontpl .coupon_banner {position:relative;display:flex;flex-direction: column;height: 25.333333vw;margin: 0 6.666666666666667% 0;padding: 4.53333vw 5.33333vw 10.66667vw;border-radius: 20px 20px 0 0;text-decoration:none;user-select:none;background-color:#000;color:#fff;font-size:3.6vw;line-height:4.77333vw;white-space:nowrap;transform: translateY(7.4666vw);box-sizing: border-box;}
+.sec_coupontpl .coupon_banner .cpn_obj{margin-top: 0; color:#fff;font-weight:300;}
+.sec_coupontpl .coupon_banner .cpn_txt{font-weight:800;}
+.sec_coupontpl .coupon_banner .cpn_txt .highlight{color:#FF4A4A}
+.sec_coupontpl .coupon_banner+.btn_couponDown+.btn_couponDown div[class~=coupon_area]:not(div[class~=cpn_case_first_a2],[class~=cpn_case_first_b2],[class~=cpn_case_re_a2],[class~=cpn_case_re_b2]){margin-top:6.6666vw;margin-bottom:-6.1333vw}
+.sec_coupontpl .coupon_banner +.btn_couponDown + .btn_couponDown +.btn_couponDown div[class~="coupon_area"]{margin-top:6.6666vw}
+.cpn_link[title="오픈예정"] .coupon_area::before{background-image:url(https://image.toast.com/aaaaac/paycoNoti/tpl_case_standby4.png);content:"오픈예정";background-size: 100% auto;}
+.cpn_link[title="당일소진"] .coupon_area::before{background-image:url(https://image.toast.com/aaaaac/paycoNoti/tpl_case_dayrunout4.png);content:"당일소진";background-size: 100% auto;}
+.cpn_link[title="전량소진"] .coupon_area::before{background-image:url(https://image.toast.com/aaaaac/paycoNoti/tpl_case_runout4.png);content:"전량소진";background-size: 100% auto;}
+.sec_coupontpl .cpn_info_lst{margin:24px 7.2vw 0;color:#9b9b9b}
+.sec_coupontpl .cpn_info_lst li{position:relative;margin-top:7PX;padding-left:8px;font-size:14px;line-height:1.46;letter-spacing:-.047em}
+.sec_coupontpl .cpn_info_lst li:before{position:absolute;display:block;width:2px;height:2px;top:9px;left:0;background:#9b9b9b;content:''}
+.sec_coupontpl .btn{display:block;position:static;margin:23px 6.666666667% 0;background-color:#f9d5c5;border-radius:10px;font-size:18px;font-weight:700;line-height:60px;color:#000;text-align:center;box-sizing:border-box;letter-spacing:-0.5px}
+
+@media screen and (min-width:750px) {
+	.sec_coupontpl{padding-bottom:100px}
+}
+@media screen and (max-width:320px) {
+	.sec_coupontpl .cpn_info_lst li{font-size:12px}
+	.sec_coupontpl .cpn_info_lst li::before{width:2px;height:2px;top:7px}
+}
+</style>
+<div class="payco_evt_bx">
+	<!-- [D] 카운트다운 영역 : sec_count-down -->
+	<div class="sec sec_count-down">
+		<em class="em txt">기간 한정! 더 높은 할인 혜택</em>
+		<div class="count-down-area">
+			<span class="txt before">종료까지</span>
+			<div class="count">
+				<span class="hour txt">23</span>
+				<span class="divider">:</span>
+				<span class="minute txt">53</span>
+				<span class="divider">:</span>
+				<span class="second txt">53</span>
+			</div>
+			<span class="txt after">남았어요!</span>
+		</div>
+	</div>
+	<!-- // 카운트다운 영역 : sec_count-down -->
+	<div class="sec">
+		<div class="blind">
+			<h1>고민시와 함께하는 아틀리에 나인 23 FW COLLECTION</h1>
+			<P>내 삶의 행복한 순간들을 위해 나만의 스타일,패션,아트,감성들로 아카이빙하는 브랜드</P>
+		</div>
+		<dl>
+			<dt class="blind">이벤트 기간</dt>
+			<dd class="evt_duration">09. 16. 10:00 ~ 09. 18. 09:59</dd>
+		</dl>
+		<img src="https://image.toast.com/aaaaac/paycoNoti/evt_mnain_header_230913.jpg" width="100%" alt="">
+	</div>
+ 	<!-- 쿠폰 템플릿 영역 : sec_coupontpl -->
+ 	<!-- [D] 배경색 적용 시 background-color:#f0eff5 / 배경이미지 적용 시 background-image:url(https://image.toast.com/aaaaac/paycoNoti/@bg_tpl_coupon_bg.jpg); -->
+	<div class="sec sec_coupontpl" style="background-color:#363636;background-image:url(https://image.toast.com/aaaaac/paycoNoti/bg_coupon_mnain_230913.jpg)">
+
+		<!-- B1.할인율UP-기본 (start) ▶ 쿠폰상태는 title="" 에 텍스트 추가: title="오픈예정" / title="당일소진" / title="전량소진" -->
+		<a href="javascript:;" class="cpn_link btn_couponDown" couponId="000000" title="">
+			<div class="coupon_area cpn_case_b1" role="text">
+				<div class="cpn_thum"><img src="https://image.toast.com/aaaaac/paycoNoti/nain_BI.png" alt="" class="logo"></div>
+				<div class="cpn_desc_bx">
+					<span class="cpn_obj">나인</span>
+					<span class="cpn_name">
+						<span class="blind">기존 할인율</span><del class="sale_rate">10%</del>
+						<span class="blind">할인율UP</span><strong class="saleup_rate">18% 할인</strong>
+					</span>
+					<span class="cpn_payopt">최대 10만원 할인</span>
+				</div>
+			</div>
+		</a>
+		<!-- //B1.할인율UP-기본 (end) -->
+
+		<!-- B2.할인율UP-포인트결제전용 (start) ▶ 쿠폰상태는 title="" 에 텍스트 추가: title="오픈예정" / title="당일소진" / title="전량소진" -->
+		<a href="javascript:;" class="cpn_link btn_couponDown" couponId="000000" title="">
+			<div class="coupon_area cpn_case_b2" role="text">
+				<div class="cpn_thum"><img src="https://image.toast.com/aaaaac/paycoNoti/coupon_point.png" alt="" class="logo"></div>
+				<div class="cpn_desc_bx">
+					<span class="cpn_obj">PAYCO 포인트 결제 전용</span>
+					<span class="cpn_name payco_cpn">
+						<span class="blind">기존 할인율</span><del class="sale_rate">10%</del>
+						<span class="blind">할인율UP</span><strong class="saleup_rate">18% 할인</strong>
+					</span>
+					<span class="cpn_name_add">+1% 추가 적립</span>
+					<span class="cpn_payopt">최대 10만원 할인</span>
+				</div>
+			</div>
+		</a>
+		<!-- //B2.할인율UP-포인트결제전용 (end) -->
+
+		<!-- 쿠폰 유의사항 (start) -->
+		<ul class="cpn_info_lst"><!-- [D] 유의사항 텍스트 색상 지정 가능 -->
+		<li>사용 기준 선착순 쿠폰입니다.</li>
+		<li>PAYCO ID 당 기간 내 1회 발급 및 사용 가능합니다.</li>
+		<li>선착순 한정 수량으로 소진 시 조기종료 될 수 있습니다.</li>
+		</ul>
+		<!-- //쿠폰 유의사항 (end) -->
+
+		<a href="payco://event?detail=http://www.nain.co.kr/" class="to-adv btn">나인 바로가기</a><!-- [D] 버튼배경색 지정 가능 -->
+	</div>
+	<!-- //쿠폰 템플릿 영역 : sec_coupontpl -->
+	<!-- [D] 공유하기 영역 : sec_share -->
+	<div class="sec sec_share">
+		<div class="tit_wrap">
+			<h3 class="title">
+				<span class="js-t">이벤트 </span>
+				<span class="js-t"><em class="emp">공유</em>하고,</span><br>
+				<span class="js-t">친구가 쿠폰쓰면</span>
+				<em class="js-t emp">포인트 적립!</em>
+			</h3>
+			<div class="js-b tooltip_box">
+				<button type="button" class="btn_tooltip"><span class="blind">쿠폰 공유 포인트 이용 안내</span></button>
+				<div class="ly_tooltip">
+					<div class="ly_cont">
+						<strong class="tit">쿠폰 공유 포인트란?</strong>
+						<p class="desc">PAYCO 쿠폰 공유 포인트란, <br>PAYCO 쿠폰 이벤트를 친구에게 추천하여 일정 조건 충족 시, 추천하신 분께 지급하는 PAYCO 포인트입니다.<br>쿠폰 공유 포인트는 PAYCO 결제 시 현금처럼 사용 가능하며, 현금으로 전환도 가능합니다. </p>
+						<strong class="tit">적립 방법</strong>
+						<ol class="desc">
+						<li>1) 친구에게 이벤트 링크 공유</li>
+						<li>2) 친구가 전달받은 링크를 통해 쿠폰 다운로드</li>
+						<li>3) 친구가 쿠폰 사용 기간 내에 해당 쿠폰 적용하여 상품 구매를 확정<br>=&gt; 이벤트 추천인에게 포인트 적립!
+						</li>
+						</ol>
+					</div>
+				<button type="button" class="btn_ly_close"><span class="blind">닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<hr class="js-b hr">
+		<div class="js-b point_wrap">
+			<div class="key"><span class="ico_payco">PAYCO</span> 쿠폰 공유 포인트 :</div>
+			<div class="value">
+				<div class="text">구매확정 금액의</div>
+				<div class="num">
+				<!-- [D] count에 숫자만 입력, 최대 5자리 / unit에 단위 입력 P or % -->
+				<div class="count">1.4</div>
+				<div class="unit">%</div>
+				</div>
+			</div>
+		</div>
+		<ul class="js-b list_sns">
+		<li class="item_sns affiliate_share_facebook"><a href="#" class="link"><span class="blind">페이스북</span></a></li>
+		<li class="item_sns affiliate_share_line"><a href="#" class="link"><span class="blind">라인</span></a></li>
+		<li class="item_sns affiliate_share_kakao"><a href="#" class="link"><span class="blind">카카오톡</span></a></li>
+		<li class="item_sns affiliate_share_sms"><a href="#" class="link"><span class="blind">SMS</span></a></li>
+		<li class="item_sns affiliate_btn_url"><a href="#" class="link"><span class="blind">링크 복사</span></a></li>
+		</ul>
+	</div>
+	<!-- //[D] 공유하기 영역 -->
+	<div class="sec item_template">
+		<div class="group_notice">
+			<div class="bx_tit">
+				<span class="ico_notice"><span class="blind">알림</span></span>
+				<em class="tit_txt">알려드립니다</em>
+			</div>
+			<p class="txt">하단 상품 가격은 18% 쿠폰 적용가 입니다.<br>이미지 터치 시, 상품 상세페이지로 이동합니다.</p>
+		</div>
+		<div class="bx_filter" pageCount="8" isAble="Y" categ="" pageNum="1" advCode="AD00000993" fixedRate="rate=18|max=100000" fixedPrice="" template="A1">
+			<em class="txt">총 <span class="txt_deco"><span class="count" id="shopzone_count">0</span>개</span> 상품</em>
+			<!-- [D] 활성화 된 옵션 : li 에 on 클래스 추가 -->
+			<ul class="lst_filter">
+			<li categ="NEW" id="shopzone_new" style="display:none"><button type="button" class="btn_option">최신순</button></li>
+			<li categ="BEST" id="shopzone_best" style="display:none"><button type="button" class="btn_option">인기순</button></li>
+			<li class="on" categ="GENERAL" id="shopzone_general" style="display:none"><button type="button" class="btn_option">일반순</button></li>
+			</ul>
+		</div>
+		<ul class="lst_item_type"></ul>
+	</div>
+	<div class="sec sec_guide">
+		<div class="tit_wrap">
+			<h3 class="tit">이용방법</h3>
+		</div>
+		<ol class="lst_guide">
+			<li>1. 쿠폰 다운로드하기</li>
+			<li>2. 가맹점에서 결제 시, 결제 수단으로 [PAYCO] 선택하기</li>
+			<li>3. 쿠폰 적용 후, 결제하기</li>
+		</ol>
+		<a href="payco://open/mycoupon" class="btn btn_type2">받은 쿠폰 확인하기</a>
+		<a href="payco://event?detail=http://www.nain.co.kr/" class="to-adv btn">나인 바로가기</a>
+	</div>
+ 	<div class="sec sec_noti">
+ 		<h3 class="tit">이벤트 유의사항</h3>
+ 		<ul class="lst_noti">
+			<li>할인쿠폰은 선착순으로 사용 가능하며, 쿠폰을 소지하고 있어도 조기 소진 시 사용이 불가합니다.</li>
+			<li>본 쿠폰은 페이코 ID당 기간 내 1회 발급 및 사용 가능합니다.</li>
+			<li>나인에서 페이코 결제 시에만 쿠폰이 사용 가능합니다.</li>
+			<li>본 쿠폰은 행사일 종료 이후 주문 변경으로 인한 재발급/재사용이 불가합니다.</li>
+			<li>선착순 마감 후 결제 취소/변경 시, 쿠폰 재사용은 불가합니다.</li>
+			<li>상품 및 주문에 대한 문의사항은 나인 고객센터(1544-7729)로 문의 바랍니다.</li>
+			<li>본 상품들은 가맹점의 정책에 따라 가격변동이 진행될 수 있습니다.</li>
+			<li>페이코 포인트 전용 쿠폰의 경우, 페이코 포인트 전액 결제 시 사용 가능하며 충전 포인트 사용 시 가맹점별 적립율에 따라 추가 적립됩니다.</li>
+			<li>본 이벤트는 NHN페이코와 나인 사정에 의해 사전 고지 없이 조기종료 또는 변경될 수 있습니다.</li>
+		</ul>
+	</div>
+</div>
+</div>
+<!--//이벤트 영역-->
+
+<!-- 선착순 쿠폰 레이어팝업 --> <!-- [D] 레이어 팝업(쿠폰 다운로드 프로모션): 각 레이어 ID로 버튼 연결 -->
+<div class="dimmed" style="display:none"></div>
+
+<div id="COUPON_ISSUED_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">선착순 쿠폰 발급 성공!</span></h2>
+			<div class="tx_desc"><span class="tx_in"><em>메뉴 &gt; 받은 쿠폰</em>에서<br>확인 할 수 있습니다.</span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_mycoupon">쿠폰함으로 이동</a>
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="COUPON_ALREADY_ISSUED_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰을 이미<br>발급 받으셨습니다.</span></h2>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="UserIssueLimitCountFail_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰을 이미<br>발급 받으셨습니다</span></h2>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="COUPON_ALREADY_USED_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰을 사용하셨습니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in">본 쿠폰은 기간 내 한 번만<br>사용할 수 있습니다.</span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="COUPON_BURNOUT_POP_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰이 모두 소진되었습니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in">더 좋은 이벤트로 찾아 뵙겠습니다.</span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="NOT_CERTIFICATED_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">본인인증이 필요합니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in"><em>메뉴 &gt; 회원정보관리</em>에서<br>본인인증을 진행해주세요.</span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="COUPON_NOT_TARGET_ly_pop" class="ly_pop" style="display:none">
+  <div class="ly_popbx">
+    <div class="ly_popin">
+      <h2><span class="ly_tit">쿠폰 발급 대상자가<br>아닙니다.</span></h2>
+      <div class="btn_area">
+        <a href="#" class="btn_ok">확인</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="NOT_TARGET_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">이벤트 대상자가 아닙니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in"><em>더 좋은 이벤트로 찾아 뵙겠습니다.</em></span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="END_EVENT_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">종료된 이벤트 입니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in"><em>더 좋은 이벤트로 찾아 뵙겠습니다.</em></span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="NOT_APP_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">잘못된 접근 입니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in"><em>페이코 앱을 통해 접속해주세요.</em></span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="ISSUE_FAILED_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰을 발급하지 못했습니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in"><em id="failed_message">발급 실패 코드 : </em></span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="PROMOTION_NOT_IN_STOCK_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰이 모두 소진되었습니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in">더 좋은 이벤트로 찾아 뵙겠습니다.</span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="OverIssueEndYmdt_ly_pop" class="ly_pop" style="display:none">
+	<div class="ly_popbx">
+		<div class="ly_popin">
+			<h2><span class="ly_tit">쿠폰이 모두 소진되었습니다.</span></h2>
+			<div class="tx_desc"><span class="tx_in">더 좋은 이벤트로 찾아 뵙겠습니다.</span></div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok">확인</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="case_view" style="display:none;overflow:hidden;position:fixed;bottom:0;right:0;left:0;z-index:9999;height:auto;padding:5px;background:#000;opacity:0.6;text-align:right">
+	<a href="#" id="COUPON_ISSUED" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">쿠폰 발급</a>
+	<a href="#" id="COUPON_ALREADY_ISSUED" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">이미받은 쿠폰</a>
+	<a href="#" id="UserIssueLimitCountFail" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">쿠폰중복 다운로드</a>
+	<a href="#" id="COUPON_ALREADY_USED" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">이미 쿠폰사용</a>
+	<a href="#" id="COUPON_BURNOUT_POP" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">쿠폰소진</a>
+	<a href="#" id="NOT_CERTIFICATED" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">본인인증</a>
+	<a href="#" id="END_EVENT" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">종료된 프로모션</a>
+ <a href="#" id="COUPON_NOT_TARGET" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">대상자 아님</a>
+ <a href="#" id="PAYMENT_CHECK_FAIL" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">쿠폰 발급 실패</a>
+	<a href="#" id="NOT_TARGET" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">다른이벤트</a>
+	<a href="#" id="NOT_APP" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">앱이 아님</a>
+	<a href="#" id="COUPON_BURNOUT" style="display:inline-block;padding:5px;background:red;font-size:13px;font-weight:700;color:#fff;text-decoration:none">전 수량 소진</a>
+	<a href="#" id="INVALID_ACCESS" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">유효하지 않은 접근</a>
+	<a href="#" id="NOT_LATEST_VERSION" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">업데이트</a>
+	<a href="#" id="NEED_INSTALL_APP" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">앱설치 안내</a>
+	<a href="#" id="LOGIN_GUIDE" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">로그인 안내</a>
+	<a href="#" id="NOT_MEMBERSHIP_TARGET" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">멤버십타겟</a>
+	<a href="#" id="PROMOTION_NOT_IN_STOCK" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">쿠폰소진</a>
+  <a href="#" id="OverIssueEndYmdt" style="display:inline-block;padding:5px;background:#212121;font-size:13px;font-weight:700;color:#fff;text-decoration:none">쿠폰소진</a>
+</div>
+<!-- //레이어팝업 -->
+<!-- [D] 공유하기 애니메이션 -->
+<script src="https://events-cdn.payco.com/front/20200506-1100/js/count.lib.min.js"></script>
+<script src="https://events-cdn.payco.com/front/20200506-1100/js/share.js?202006151600"></script>
+<!-- //[D] 공유하기 애니메이션 -->
+
+<!-- '확인' 클릭 시 내쿠폰함 이동 스크립트 (필요한 경우만 사용) -->
+<script>
+$(function(){
+	$("#COUPON_ISSUED_ly_pop .btn_mycoupon").click(function(e){
+		location.href = "payco://open/mycoupon";
+	});
+});
+</script>
+
+<!-- [D] 카운트 다운 애니메이션 -->
+<script>
+	var count = document.querySelector('.count');
+	var count_hour = count.querySelector('.hour');
+	var count_minute = count.querySelector('.minute');
+	var count_second = count.querySelector('.second');
+	
+	// 4월 15일 09:59:59
+	var dTime = new Date('2023-09-18T09:59:59');
+	var dTimeGetTime = dTime.getTime();
+	
+	function countDown () {
+		var nTime = Date.now();
+		var hour = digits(Math.floor((dTimeGetTime - nTime) / 1000 / 60 / 60));
+		var minute = digits(Math.floor(((dTimeGetTime - nTime) - hour * 1000 * 60 * 60) / 1000 / 60));
+		var second = digits(Math.floor(((dTimeGetTime - nTime) - (hour * 1000 * 60 * 60 + minute * 1000 * 60)) / 1000));
+		count_hour.textContent = hour;
+		count_minute.textContent = minute;
+		count_second.textContent = second;
+	}
+	
+	function digits (arg) {
+		var res = String(arg).length === 1 ? '0' + String(arg) : arg;
+		return res;
+	}
+	
+	countDown();
+	setInterval(countDown, 1000)
+</script>
+<!-- // 카운트 다운 애니메이션 -->
+
+
+</div>
+</div>
+
+</div>
+</div>
